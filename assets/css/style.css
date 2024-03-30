@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.home main {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.is-style-outline.is-style-outline.wp-block-button .wp-block-button__link {
+  &:hover {
+    border-color: var(--wp--preset--color--tertiary);
+    color: var(--wp--preset--color--tertiary);
+  }
+}

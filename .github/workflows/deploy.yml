@@ -1,0 +1,27 @@
+# このワークフローの名前
+name: deploy
+
+on:
+  repository_dispatch:
+  push: # mainにプッシュしたときに動く
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # git のチェックアウトを行い、この環境に対象のリポを取得する
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }} # FTPサーバーのURLを設定
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }} # FTPのユーザー名を設定
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} # FTPのパスワードを設定
+          LOCAL_DIR: ./ # どのディレクトリのデータをアップロードするか
+          REMOTE_DIR: /hariko/wp-content/themes/hariko/ # リモートのどのディレクトリにアップロードするか
+          ARGS: --delete --parallel=10 --exclude-glob=.git*/**
+            --exclude-glob=.git** --exclude-glob=.htaccess # ARGSでparallel(xFTPサーバーへの同時接続数)を設定する
