@@ -28,3 +28,13 @@ register_block_style( 'core/navigation', [
     'label' => __( 'Navigation Space', 'hariko' ),
     'inline_style' => '.wp-block-navigation__responsive-container.is-menu-open { padding: 20px; }',
 ]);
+
+//更新の確認
+require get_template_directory() . '/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://download.bytedesign.net/hariko.json', //Full path to the main plugin file or functions.php.
+	__FILE__,
+	'hariko'
+);
