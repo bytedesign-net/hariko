@@ -340,8 +340,8 @@
       "title": "サイトフッター"
     },
     {
-      "area": "page",
-      "name": "posts"
+      "name": "posts",
+      "title": "投稿一覧"
     }
   ]
 }
