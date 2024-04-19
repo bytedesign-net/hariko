@@ -21,7 +21,7 @@
 <!-- /wp:cover -->
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|l"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--l)"><!-- wp:group {"backgroundColor":"base-2"} -->
+<main id="content" class="wp-block-group" style="margin-top:var(--wp--preset--spacing--l)"><!-- wp:group {"backgroundColor":"base-2"} -->
 <div class="wp-block-group has-base-2-background-color has-background"><!-- wp:group -->
 <div class="wp-block-group"><!-- wp:post-content {"layout":{"type":"constrained"}} /--></div>
 <!-- /wp:group --></div>
