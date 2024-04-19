@@ -12,6 +12,11 @@ Hariko is a WordPress starter theme framework that designed to be flexible, vers
 
 == Changelog ==
 
+= 1.0.1 =
+* Accessibility Improvements
+** Text Links: Underlines are now displayed for text links to enhance visual distinction and improve accessibility for users with visual impairments.
+** Skip Links: A skip link has been implemented to provide direct navigation to the main content area for screen reader users. This enhances keyboard navigation and accessibility for users who rely on assistive technologies.
+
 = 1.0 =
 * Initial release
 
