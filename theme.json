@@ -343,5 +343,22 @@
       "name": "posts",
       "title": "投稿一覧"
     }
+  ],
+  "customTemplates": [
+    {
+      "name": "page-with-sidebar",
+      "postTypes": ["page"],
+      "title": "固定ページサイドバー有"
+    },
+    {
+      "name": "single-with-sidebar",
+      "postTypes": ["post"],
+      "title": "投稿ページサイドバー有"
+    },
+    {
+      "name": "single-fullwidth",
+      "postTypes": ["post"],
+      "title": "投稿ページ全幅"
+    }
   ]
 }
