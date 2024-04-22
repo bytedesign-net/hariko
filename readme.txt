@@ -15,7 +15,6 @@ Hariko is a WordPress starter theme framework that designed to be flexible, vers
 * Bug Fix
 ** Fixed issue with page-fullwidth template not loading.
 
- = 1.0.2 =
 = 1.0.2 =
 * Bug Fix
 ** Fixed issue with custom templates not loading.
