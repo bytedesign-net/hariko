@@ -2,7 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
-header, footer {
+header,
+footer {
   & a:where(:not(.wp-element-button)) {
     text-decoration: none;
   }
@@ -19,6 +20,7 @@ header, footer {
     color: var(--wp--preset--color--tertiary);
   }
 }
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
