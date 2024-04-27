@@ -180,17 +180,17 @@
       "fontFamilies": [
         {
           "fontFamily": "sans-serif",
-          "name": "デフォルト",
+          "name": "Default",
           "slug": "body"
         },
         {
           "fontFamily": "sans-serif",
-          "name": "ゴシック体",
+          "name": "Sans serif",
           "slug": "sans-serif"
         },
         {
           "fontFamily": "serif",
-          "name": "明朝体",
+          "name": "Serif",
           "slug": "serif"
         }
       ]
@@ -234,7 +234,7 @@
           "text": "var(--wp--preset--color--base-2)"
         },
         "typography": {
-          "fontFamily": "Noto Sans JP",
+          "fontFamily": "var(--wp--preset--font-family--sans-serif)",
           "fontStyle": "normal",
           "fontWeight": "700"
         }
@@ -332,16 +332,16 @@
     {
       "area": "header",
       "name": "header",
-      "title": "サイトヘッダー"
+      "title": "Header"
     },
     {
       "area": "footer",
       "name": "footer",
-      "title": "サイトフッター"
+      "title": "Footer"
     },
     {
       "name": "posts",
-      "title": "投稿一覧"
+      "title": "Posts"
     }
   ]
 }
