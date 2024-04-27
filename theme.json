@@ -348,22 +348,22 @@
     {
       "name": "single-with-sidebar",
       "postTypes": ["post"],
-      "title": "投稿ページサイドバー有"
+      "title": "Single with sidebar"
     },
     {
       "name": "single-fullwidth",
       "postTypes": ["post"],
-      "title": "投稿ページ全幅"
+      "title": "Single fullwidth"
     },
     {
       "name": "page-with-sidebar",
       "postTypes": ["page"],
-      "title": "固定ページサイドバー有"
+      "title": "Page with sidebar"
     },
     {
       "name": "page-fullwidth",
       "postTypes": ["page"],
-      "title": "固定ページ全幅"
+      "title": "Page fullwidth"
     }
   ]
 }
