@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+header, footer {
+  & a:where(:not(.wp-element-button)) {
+    text-decoration: none;
+  }
+}
+
 .home main {
   margin-block-start: 0;
   margin-block-end: 0;
