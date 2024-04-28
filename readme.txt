@@ -1,7 +1,7 @@
 === Hariko ===
 Requires at least: 6.5.2
 Tested up to: 6.5.2
-Requires PHP: 8.1
+Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -10,6 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Hariko is a WordPress starter theme framework that designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
 
 == Changelog ==
+= 1.0.8 =
+** Update the required PHP version.
+
 = 1.0.7 =
 ** Replace deprecated functions with recommended ones.
 
