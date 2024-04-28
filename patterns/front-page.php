@@ -8,11 +8,11 @@
 ?>
 <!-- wp:template-part {"slug":"header","tagName":"header","area":"header"} /-->
 
-<!-- wp:cover {"url":"<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/hariko_hero.jpg","dimRatio":0,"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hariko_hero.jpg","dimRatio":0,"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover" style="margin-top:0"><span aria-hidden="true"
         class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img
         class="wp-block-cover__image-background" alt=""
-        src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/hariko_hero.jpg"
+        src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hariko_hero.jpg"
         data-object-fit="cover" />
     <div class="wp-block-cover__inner-container"><!-- wp:site-title {"isLink":false,"fontSize":"xxxxxxl"} /-->
 
