@@ -2,7 +2,7 @@ body {
   background-color: var(--wp--preset--color--base-2);
 }
 
-/* Skip link. */
+/* Skip Link. */
 .wp-block-html:first-child {
   display: none;
 }
