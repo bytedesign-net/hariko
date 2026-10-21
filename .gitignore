@@ -17,10 +17,6 @@ pnpm-debug.log*
 .env
 .env.production
 
-# environment variables
-.env
-.env.production
-
 # @wordpress/env (local dev environment)
 .wp-env.json
 .wp-env/
