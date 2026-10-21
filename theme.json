@@ -1,6 +1,6 @@
 {
-  "$schema": "https://schemas.wp.org/wp/6.4/theme.json",
-  "version": 2,
+  "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+  "version": 3,
   "settings": {
     "appearanceTools": true,
     "color": {
@@ -60,6 +60,7 @@
       "allowEditing": true
     },
     "spacing": {
+      "defaultSpacingSizes": false,
       "spacingSizes": [
         {
           "name": "XS",
@@ -100,6 +101,7 @@
       "units": ["%", "px", "em", "rem", "vh", "vw"]
     },
     "typography": {
+      "defaultFontSizes": false,
       "fluid": true,
       "fontSizes": [
         {
@@ -340,8 +342,14 @@
       "title": "Footer"
     },
     {
+      "area": "uncategorized",
       "name": "posts",
       "title": "Posts"
+    },
+    {
+      "area": "uncategorized",
+      "name": "sidebar",
+      "title": "Sidebar"
     }
   ],
   "customTemplates": [

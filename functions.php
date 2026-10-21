@@ -3,7 +3,6 @@
 add_action( 'after_setup_theme', 'hariko_support' );
 function hariko_support() {
 	add_theme_support( 'wp-block-styles' );
-	add_editor_style('style.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'hariko_enqueue' );
@@ -23,8 +22,14 @@ function hariko_add_editor_styles() {
 	add_editor_style( array( 'style.css', 'editor-style.css' ) );
 }
 
-register_block_style( 'core/navigation', [
-    'name' => 'navigation-space',
-    'label' => __( 'Navigation Space', 'hariko' ),
-    'inline_style' => '.wp-block-navigation__responsive-container.is-menu-open { padding: 20px; }',
-]);
+add_action( 'init', 'hariko_register_block_styles' );
+function hariko_register_block_styles() {
+	register_block_style(
+		'core/navigation',
+		[
+			'name'         => 'navigation-space',
+			'label'        => __( 'Navigation Space', 'hariko' ),
+			'inline_style' => '.wp-block-navigation__responsive-container.is-menu-open { padding: 20px; }',
+		]
+	);
+}

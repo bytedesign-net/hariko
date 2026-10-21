@@ -1,14 +1,19 @@
 === Hariko ===
 Requires at least: 6.5.2
-Tested up to: 6.5.2
+Tested up to: 7.1.3
 Requires PHP: 7.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Hariko is a WordPress starter theme framework that designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Hariko comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
+Hariko is a minimalist WordPress block theme designed for flexibility and customization. It includes preset colors, typography, content and wide layout sizes, reusable template parts, and standard, full-width, and sidebar templates for pages and posts.
 
 == Changelog ==
+= 1.0.11 =
+* Updated theme.json for WordPress 7.1 compatibility.
+* Fixed template part area metadata and duplicate skip links.
+* Updated front page content and removed external links.
+
 = 1.0.10 =
 ** Fixed Description.
 

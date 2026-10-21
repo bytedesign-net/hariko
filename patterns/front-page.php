@@ -24,7 +24,7 @@
             <!-- wp:button {"backgroundColor":"base-2","textColor":"tertiary","style":{"elements":{"link":{"color":{"text":"var:preset|color|tertiary"}}}},"className":"is-style-fill"} -->
             <div class="wp-block-button is-style-fill"><a
                     class="wp-block-button__link has-tertiary-color has-base-2-background-color has-text-color has-background has-link-color wp-element-button"
-                    href="https://hariko.bytedesign.net/?p=257">Get started</a></div>
+                    href="#content">Get started</a></div>
             <!-- /wp:button -->
         </div>
         <!-- /wp:buttons -->
@@ -32,13 +32,13 @@
 </div>
 <!-- /wp:cover -->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|l"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--l)">
+<!-- wp:group {"tagName":"main","anchor":"content","style":{"spacing":{"margin":{"top":"var:preset|spacing|l"}}},"layout":{"type":"constrained"}} -->
+<main id="content" class="wp-block-group" style="margin-top:var(--wp--preset--spacing--l)">
     <!-- wp:group {"backgroundColor":"base-2"} -->
     <div class="wp-block-group has-base-2-background-color has-background"><!-- wp:group -->
         <div class="wp-block-group">
             <!-- wp:heading -->
-            <h2 class="wp-block-heading">Hariko: A Minimalist WordPress Block Editor Theme for Customization</h2>
+            <h2 class="wp-block-heading">Hariko: A Minimalist WordPress Block Theme for Customization</h2>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph -->
@@ -47,8 +47,8 @@
             <!-- /wp:paragraph -->
 
             <!-- wp:paragraph -->
-            <p>It features a base font size of 16px, adjustable from xs (12px) to xxxxxxxl (57px) in 10 increments,
-                making it an ideal starter theme.</p>
+            <p>It includes ten font-size presets from xs (12px) to xxxxxxl (57px), with a default medium size of
+                16px, making it an ideal starter theme.</p>
             <!-- /wp:paragraph -->
 
             <!-- wp:heading -->
@@ -56,8 +56,8 @@
             <!-- /wp:heading -->
 
             <!-- wp:paragraph -->
-            <p>Hariko comes with preset content widths of up to 980px and full-width layouts of up to 1180px. It also
-                includes templates for two-column layouts with or without sidebars.</p>
+            <p>Hariko provides a 980px content width and an 1180px wide layout, along with standard, full-width, and
+                sidebar layouts for pages and posts.</p>
             <!-- /wp:paragraph -->
 
             <!-- wp:heading -->
@@ -65,10 +65,8 @@
             <!-- /wp:heading -->
 
             <!-- wp:paragraph -->
-            <p>For general styling, you can use the style settings (typography, colors, layout, blocks) in the <a
-                    href="https://wordpress.com/ja/support/using-styles/">site editor</a>. For more specific
-                customization, you can add or modify templates as needed. See the <a
-                    href="https://hariko.bytedesign.net/?p=288">Customization Guide</a>.</p>
+            <p>For general styling, you can use the style settings (typography, colors, layout, blocks) in the site
+                editor. For more specific customization, you can add or modify templates as needed.</p>
             <!-- /wp:paragraph -->
 
             <!-- wp:heading -->

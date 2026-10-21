@@ -20,3 +20,12 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+
+# @wordpress/env (local dev environment)
+.wp-env.json
+.wp-env/
+.wp-env-data/
+
+# Local development tooling; not part of the distributed theme.
+package.json
+package-lock.json
