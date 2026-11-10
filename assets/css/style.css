@@ -2,11 +2,72 @@ html {
   scroll-behavior: smooth;
 }
 
+/*
+ * Visible focus indicator for keyboard users (WCAG 2.4.7 / 2.4.11 / 1.4.11).
+ * A dark outline over a light box-shadow halo: the white ring guarantees 3:1
+ * separation on dark surfaces (e.g. the front page hero) while the dark
+ * outline stays visible on light ones, so the indicator works on any
+ * background without per-background overrides.
+ */
+:is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--wp--preset--color--contrast);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--wp--preset--color--base-2);
+}
+
+/* Respect the user's motion preference (WCAG 2.3.3 / 2.2.2). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
 header,
 footer {
   & a:where(:not(.wp-element-button)) {
     text-decoration: none;
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
   }
+
+  /* Links inside running text (footer site title, credit paragraph) must keep
+   * their underline so they are distinguishable without color (WCAG 1.4.1).
+   * Higher element specificity than the rule above; hover keeps underlining. */
+  & p a:where(:not(.wp-element-button)) {
+    text-decoration: underline;
+  }
+}
+
+/* Enlarge navigation link click targets (WCAG 2.5.8 Target Size). */
+.wp-block-navigation
+  .wp-block-navigation-item
+  > .wp-block-navigation-item__content {
+  padding-block: 0.625rem;
+}
+
+/*
+ * Enlarge the submenu disclosure control to a 24×24 minimum hit area
+ * (WCAG 2.5.8 Target Size Minimum); the core toggle renders icon-sized (10×10).
+ * The icon glyph itself is unchanged and stays centered.
+ */
+.wp-block-navigation
+  .wp-block-navigation-submenu__toggle.wp-block-navigation__submenu-icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 24px;
+  min-width: 24px;
 }
 
 .home main {
@@ -14,11 +75,45 @@ footer {
   margin-block-end: 0;
 }
 
+/* Outline buttons inherit currentColor from context; keep a context-safe hover tint. */
 .is-style-outline.is-style-outline.wp-block-button .wp-block-button__link {
   &:hover {
-    border-color: var(--wp--preset--color--tertiary);
-    color: var(--wp--preset--color--tertiary);
+    background-color: color-mix(in srgb, currentColor 12%, transparent);
   }
+}
+
+/*
+ * Show the WordPress core skip link when focused (WCAG 2.4.1).
+ * Core injects `a#wp-skip-link.skip-link.screen-reader-text` on pages that
+ * contain a main landmark and hides it with .screen-reader-text styles.
+ * Reveal it in theme colors; more specific than core's own reveal rule.
+ */
+.skip-link.screen-reader-text:focus {
+  background-color: var(--wp--preset--color--base-2) !important;
+  clip: auto !important;
+  clip-path: none !important;
+  color: var(--wp--preset--color--contrast) !important;
+  display: block !important;
+  font-size: 1em !important;
+  height: auto !important;
+  left: 5px;
+  line-height: normal !important;
+  padding: 15px 23px 14px !important;
+  text-decoration: none;
+  top: 5px;
+  width: auto !important;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+/*
+ * Form field boundaries for non-text contrast (WCAG 1.4.11).
+ * Excludes controls that have no rectangular border (checkbox, radio, etc.).
+ */
+input:is([type="color"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="search"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"]),
+select,
+textarea {
+  border: 1px solid var(--wp--preset--color--gray);
+  padding: 0.5em 0.75em;
 }
 
 /* Text meant only for screen readers. */

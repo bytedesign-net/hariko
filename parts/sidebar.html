@@ -1,19 +1,41 @@
-<!-- wp:heading {"fontSize":"xxxl"} -->
-<h2 class="wp-block-heading has-xxxl-font-size">見出し2</h2>
+<!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|s","left":"var:preset|spacing|s"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--s);padding-left:var(--wp--preset--spacing--s)">
+<!-- wp:heading {"level":2,"fontSize":"l"} -->
+<h2 class="wp-block-heading has-l-font-size">Search</h2>
 <!-- /wp:heading -->
 
-<!-- wp:heading {"level":3,"fontSize":"xxl"} -->
-<h3 class="wp-block-heading has-xxl-font-size">見出し3</h3>
+<!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search","buttonUseIcon":true,"buttonWidth":100,"buttonWidthUnit":"%"} /-->
+
+<!-- wp:heading {"level":2,"fontSize":"l"} -->
+<h2 class="wp-block-heading has-l-font-size">Latest Posts</h2>
 <!-- /wp:heading -->
 
-<!-- wp:heading {"level":4,"fontSize":"xl"} -->
-<h4 class="wp-block-heading has-xl-font-size">見出し4</h4>
+<!-- wp:query {"queryId":20,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"layout":{"type":"constrained"}} -->
+<div class="wp-block-query">
+<!-- wp:post-template {"layout":{"type":"default"}} -->
+<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"m"} /-->
+
+<!-- wp:post-date {"fontSize":"s"} /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph {"fontSize":"s"} -->
+<p class="has-s-font-size">No posts found yet.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results -->
+</div>
+<!-- /wp:query -->
+
+<!-- wp:heading {"level":2,"fontSize":"l"} -->
+<h2 class="wp-block-heading has-l-font-size">Categories</h2>
 <!-- /wp:heading -->
 
-<!-- wp:heading {"level":5,"fontSize":"l"} -->
-<h5 class="wp-block-heading has-l-font-size">見出し5</h5>
+<!-- wp:categories {"showPostCounts":true,"onlyTopLevel":false} /-->
+
+<!-- wp:heading {"level":2,"fontSize":"l"} -->
+<h2 class="wp-block-heading has-l-font-size">Archives</h2>
 <!-- /wp:heading -->
 
-<!-- wp:heading {"level":6,"fontSize":"m"} -->
-<h6 class="wp-block-heading has-m-font-size">見出し6</h6>
-<!-- /wp:heading -->
+<!-- wp:archives {"showPostCounts":true} /-->
+</div>
+<!-- /wp:group -->

@@ -2,7 +2,12 @@ body {
   background-color: var(--wp--preset--color--base-2);
 }
 
-/* Skip Link. */
-.wp-block-html:first-child {
-  display: none;
+/* Visible focus indicator, mirroring the front end (WCAG 2.4.7). */
+:is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--wp--preset--color--contrast);
+  outline-offset: 2px;
+}
+
+a {
+  text-underline-offset: 3px;
 }
