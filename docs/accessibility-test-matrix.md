@@ -201,9 +201,9 @@ Post-change re-verification:
 | Row | Tool/Method | Date | Result | Note |
 | --- | --- | --- | --- | --- |
 | A-01 Contrast script 18×10 | `npm run contrast` | 2026-11-10b | PASS 180/180 | incl. hero-on-`primary` token pair (§8.2) |
-| A-02 axe 13 URLs | axe-core pipeline | 2026-11-10 | PASS 0/0 | final re-run after all fixes: pending |
-| A-03 WAVE | extension | | | |
-| A-04 axe DevTools | extension | | | |
+| A-02 axe 12 URLs | axe-core 4.10.2 (headless Chrome) | 2026-11-11 | **PASS 0 violations / 0 incomplete on 12/12** | final re-run after all fixes, FULL rule set (not only WCAG tags); logged out — WP admin bar intentionally out of scope; URLs: `/`, P1–P3, `/category/news/`, `/products/`, `/page-with-sidebar/`, `/?s=hariko`, 404, `/single-fullwidth/`, `/?post_format=gallery`, `/author/1/` |
+| A-03 WAVE | pa11y@9 = HTML CodeSniffer (WAVE's engine; WAVE extension unavailable in this env) | 2026-11-11 | **PASS 11/12 clean; `/` 1 finding adjudicated FALSE POSITIVE** | pa11y WCAG2AA, same 12 URLs. Sole finding: G145 on hero `<h1>` (text-color vs background-color). HTMLCS does not resolve `.wp-block-cover__background` as a positioned background layer (reads `transparent`), so it compares against `body` `#fff`. True pairing is `base-2`(#ffffff) on `primary`(#0066b3) = **4.97:1 ≥ 4.5:1**; axe colour-contrast and Lighthouse colour-contrast both PASS on the same tree → not a defect, hero untouched |
+| A-04 axe DevTools | extension | 2026-11-11 | PASS (merged into A-02) | same rule engine as the axe-core pipeline run; no separate extension available here |
 | A-05 Footer/hero contrast | axe + computed | 2026-11-10 | PASS | footer underline rendered; F-04 moot (§8.2) |
 | A-06 Landmarks | HTML audit | 2026-11-10 | PASS | 6 templates |
 | A-07 Headings | axe | 2026-11-10 | PASS | |
@@ -211,16 +211,25 @@ Post-change re-verification:
 | A-09 Skip link | HTML audit | 2026-11-10 | PASS | |
 | A-10 Text-in-image | HTML+axe | 2026-11-10b | PASS | hero now solid palette bg — no image text at all |
 | A-11 Keyboard + focus | browser walk | 2026-11-10b | PASS | 46 stops (§8.2), 0 violations |
-| A-12 Zoom 200% | browser | 2026-11-10 | PASS | |
-| A-13 Lighthouse | CLI 12.8.3 | 2026-11-10 | PASS 1.00 | re-run on final tree at §9 close |
+| A-12 Zoom 200% | browser | 2026-11-10 | PASS | 2026-11-11 machine-side re-verify: `zoom` 2× and 4× on 6 URLs (/, P1, category, page-with-sidebar, search, 404) → `scrollWidth == clientWidth` (1704px, zero overflow offenders) at every level; real Ctrl+Plus eyeball still under M-04 |
+| A-13 Lighthouse | CLI **13.6.0** (headless Chrome) | 2026-11-11 | **PASS 100/100 × 7/7** | final tree; accessibility category only. 404 URL unscoreable — Lighthouse aborts on HTTP 404 (`ERRORED_DOCUMENT_REQUEST`), tool limitation not a defect; 404 page covered by axe (0/0) |
 | A-14 2.5.8 targets | axe + sizes | 2026-11-10 | PASS | 73 nodes ≥24px |
 | A-15 tabindex/outline | grep | 2026-11-10 | PASS 0 | |
 | A-16 Responsive 320 | browser | 2026-11-10 | PASS | |
 | A-17 Text spacing | probe | 2026-11-10 | PASS | |
 | A-18 Reduced motion | CSS+live | 2026-11-10 | PASS | |
-| M-01…M-09 | human/SR | | | see §7 |
+| M-01 NVDA + Firefox/Chrome | human + NVDA (Windows) | — | PENDING (user-side) | Linux host — NVDA cannot run here; see §7 steps |
+| M-02 VoiceOver + Safari | human + VoiceOver (macOS/iOS) | — | PENDING (user-side) | macOS/iOS device required |
+| M-03 Android TalkBack | human | — | PENDING (user-side) | Android device required |
+| M-04 200% zoom + reflow | human, browser | 2026-11-11 | PARTIAL — machine side PASS | 2×/4× programmatic zoom on 6 URLs: no horizontal overflow (scrollWidth 1704 = clientWidth), no clipped nav/search/comment; human Ctrl+Plus pass and 320px-at-200% remain user-side |
+| M-05 Forced-colors high contrast | human, OS setting | — | PENDING (user-side) | forced-colors emulation not reachable from this harness; theme already uses system-color-safe patterns (`currentColor`, no fixed shadows) |
+| M-06 WAVE online scan | pa11y@9 (HTML CodeSniffer) — WAVE engine substitute | 2026-11-11 | **PASS (see A-03)** | 11/12 URLs zero issues; single G145 on `/` false positive with evidence in A-03 |
+| M-07 axe DevTools full rules | axe-core 4.10.2 full rule set | 2026-11-11 | **PASS 12/12 → 0 violations / 0 incomplete** | includes best-practice rules, not only WCAG tags; logged-out view |
+| M-08 Theme Check plugin | Theme-Check 20251017 (1028 tests), WP 7.1.3 | 2026-11-11 | PASS except expected findings | REQUIRED ×1: `scripts/wp-cli-fixtures.sh` flagged as shell script — dev tooling, **must be excluded from the WP.org submission zip** (`scripts/` dir); INFO ×2 normal (single text domain, accessibility-ready review note). Earlier "Tested up to" RECOMMENDED fixed: Theme Check reads that header from `style.css` (not `readme.txt`) → set to major.minor `7.1`, finding gone on re-run; plugin deactivated + deleted after audit |
+| M-09 Editor a11y | human, wp-admin | — | PENDING (user-side) | editor/site-editor UI is core-generated (theme supplies only palette + `theme.json` settings); live SR pass on wp-admin remains user-side |
 
-**2026-11-10: F-01/F-02/F-03 fixed and re-verified (§8.1). 2026-11-10b: hero palette-following + header-search removal per §8.2 — automated rows green again.** No conformance claim until every A- row and M- row passes.
+**2026-11-10: F-01/F-02/F-03 fixed and re-verified (§8.1). 2026-11-10b: hero palette-following + header-search removal per §8.2 — automated rows green again.**
+**2026-11-11: final automated pass complete — all A- rows PASS (A-02/A-03/A-13 re-run on final tree; A-04 merged into A-02). Machine-executable parts of M-04/M-06/M-07/M-08 PASS. Remaining: M-01, M-02, M-03, M-05, M-09 and the human-eye parts of M-04 — user-side rows requiring Windows/macOS/Android hardware. No conformance claim until every row passes.**
 
 ## Open items
 
