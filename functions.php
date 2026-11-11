@@ -1,35 +1,26 @@
 <?php
+/**
+ * Hariko theme functions.
+ *
+ * The root style.css is reserved for end-user custom CSS and is
+ * intentionally not enqueued. The theme's own stylesheet lives in
+ * assets/css/theme.css.
+ *
+ * @package Hariko
+ */
 
-add_action( 'after_setup_theme', 'hariko_support' );
-function hariko_support() {
-	add_theme_support( 'wp-block-styles' );
-}
-
-add_action( 'wp_enqueue_scripts', 'hariko_enqueue' );
-function hariko_enqueue() {
-    $style_css_path = get_theme_file_path('style.css');
-    $style_css_uri = get_stylesheet_uri();
-    wp_enqueue_style('hariko-style', $style_css_uri, [], filemtime($style_css_path));
-
-    $global_css_path = get_theme_file_path('assets/css/style.css');
-    $global_css_uri = get_theme_file_uri('assets/css/style.css');
-    wp_enqueue_style('hariko-global-style', $global_css_uri, [], filemtime($global_css_path));
-}
-
-add_action( 'after_setup_theme', 'hariko_add_editor_styles' );
-function hariko_add_editor_styles() {
+add_action( 'after_setup_theme', 'hariko_setup' );
+function hariko_setup() {
 	add_theme_support( 'editor-styles' );
-	add_editor_style( array( 'style.css', 'editor-style.css' ) );
+	add_editor_style( 'editor-style.css' );
 }
 
-add_action( 'init', 'hariko_register_block_styles' );
-function hariko_register_block_styles() {
-	register_block_style(
-		'core/navigation',
-		[
-			'name'         => 'navigation-space',
-			'label'        => __( 'Navigation Space', 'hariko' ),
-			'inline_style' => '.wp-block-navigation__responsive-container.is-menu-open { padding: 20px; }',
-		]
+add_action( 'wp_enqueue_scripts', 'hariko_enqueue_styles' );
+function hariko_enqueue_styles() {
+	wp_enqueue_style(
+		'hariko-theme',
+		get_theme_file_uri( 'assets/css/theme.css' ),
+		array(),
+		wp_get_theme()->get( 'Version' )
 	);
 }

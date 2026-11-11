@@ -1,3 +1,9 @@
+/*
+ * Hariko theme styles (front end). Enqueued from functions.php.
+ * Note: the root style.css is reserved for end-user custom CSS and is
+ * intentionally not enqueued.
+ */
+
 html {
   scroll-behavior: smooth;
 }
