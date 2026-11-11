@@ -12,6 +12,10 @@
 add_action( 'after_setup_theme', 'hariko_setup' );
 function hariko_setup() {
 	load_theme_textdomain( 'hariko', get_theme_file_path( 'languages' ) );
+	// Loads wp-includes/css/dist/block-library/theme.css, which provides the
+	// default block spacing (e.g. padding for .wp-block-group.has-background,
+	// the blockquote border and padding, code block padding).
+	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'editor-styles' );
 	add_editor_style( 'editor-style.css' );
 }
