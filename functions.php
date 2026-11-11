@@ -117,9 +117,9 @@ function hariko_translate_block_attributes( $block ) {
 }
 
 /**
- * Replaces translatable strings shipped as static text inside heading and
- * paragraph blocks (in HTML templates and template parts) with their
- * translations at render time.
+ * Replaces translatable strings shipped as static text inside heading,
+ * paragraph and button blocks (in HTML templates and template parts) with
+ * their translations at render time.
  *
  * @param string $block_content The block content about to be appended.
  * @return string Filtered block content.
@@ -142,6 +142,7 @@ function hariko_translate_block_content( $block_content ) {
 }
 add_filter( 'render_block_core/heading', 'hariko_translate_block_content' );
 add_filter( 'render_block_core/paragraph', 'hariko_translate_block_content' );
+add_filter( 'render_block_core/button', 'hariko_translate_block_content' );
 
 /**
  * Translates the footer credit paragraph shipped in parts/footer.html.
