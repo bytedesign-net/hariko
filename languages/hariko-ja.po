@@ -1,0 +1,256 @@
+# Copyright (C) 2026 BYTE DESIGN
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hariko 1.0.12\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/hariko\n"
+"Last-Translator: BYTE DESIGN\n"
+"Language-Team: BYTE DESIGN\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-11-11 20:00+0900\n"
+"X-Generator: Poedit\n"
+"X-Domain: hariko\n"
+
+#. Description of the theme
+#: style.css
+msgid "Hariko is an accessible block theme designed to WCAG 2.2 AA. It includes visible focus indicators for every interactive element, keyboard skip links, sufficient color contrast, reduced-motion support, and works as a base for custom-made sites."
+msgstr "Hariko は WCAG 2.2 AA への準拠を設計目標としたアクセシビリティ対応のブロックテーマです。すべての操作要素にわかりやすいフォーカス表示、キーボード用のスキップリンク、十分なカラーコントラスト、モーション低減対応を備え、オリジナルサイト制作のベースとして使えます。"
+
+#. Translators: Label of the "read more" link below post excerpts.
+#: functions.php:44
+msgid "Read More"
+msgstr "続きを読む"
+
+#. Translators: Label of the link to the previous posts page.
+#: functions.php:46
+msgid "Newer Posts"
+msgstr "新しい投稿"
+
+#. Translators: Label of the link to the next posts page.
+#: functions.php:48
+msgid "Older Posts"
+msgstr "古い投稿"
+
+#: functions.php:49
+msgid "Search"
+msgstr "検索"
+
+#: functions.php:50
+msgid "Please try searching."
+msgstr "検索をお試しください。"
+
+#. Translators: ARIA label of the header navigation area.
+#: functions.php:52
+msgid "Main menu"
+msgstr "メインメニュー"
+
+#: functions.php:53
+msgid "Page Not Found"
+msgstr "ページが見つかりません"
+
+#: functions.php:54
+msgid "The page you are looking for does not exist, or it has been moved."
+msgstr "お探しのページは存在しないか、移動された可能性があります。"
+
+#: functions.php:55
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "お使いの検索条件に一致する投稿は見つかりませんでした。別のキーワードでお試しください。"
+
+#: functions.php:56
+msgid "Latest Posts"
+msgstr "最新投稿"
+
+#: functions.php:57
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: functions.php:58
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: functions.php:59
+msgid "No posts found yet."
+msgstr "まだ投稿がありません。"
+
+#: functions.php:60 patterns/front-page.php:26
+msgid "Get started"
+msgstr "はじめてみる"
+
+#. Translators: 1: site title markup with a link to the site, 2: linked WordPress name.
+#: functions.php:160
+msgid "%1$s theme by BYTE DESIGN. Powered by %2$s."
+msgstr "%1$s は BYTE DESIGN によるテーマです。Powered by %2$s。"
+
+#: functions.php:162
+msgid "https://wordpress.org/"
+msgstr "https://ja.wordpress.org/"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr "極小"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr "小"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr "中"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr "大"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr "特大"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2XL"
+msgstr "巨大"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3XL"
+msgstr "極大"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Default"
+msgstr "標準"
+
+#: patterns/front-page.php:38
+msgid "Hariko: A Minimalist WordPress Block Theme for Customization"
+msgstr "Hariko:カスタマイズのためのミニマルな WordPress ブロックテーマ"
+
+#: patterns/front-page.php:42
+msgid "is a WordPress block editor theme designed with a minimalist aesthetic and built for customization."
+msgstr "は、ミニマルな美学を基に設計され、カスタマイズ向けに構築された WordPress ブロックエディターテーマです。"
+
+#: patterns/front-page.php:46
+msgid "It includes ten font-size presets from xs (12px) to xxxxxxl (57px), with a default medium size of 16px, making it an ideal starter theme."
+msgstr "デフォルトの medium(16px)から xs(12px)から xxxxxxl(57px)まで 10 段階のフォントサイズプリセットを備え、スターターテーマとして最適です。"
+
+#: patterns/front-page.php:50
+msgid "User-Friendly and Versatile Templates"
+msgstr "使いやすい汎用性の高いテンプレート"
+
+#: patterns/front-page.php:54
+msgid "Hariko provides a 980px content width and an 1180px wide layout, along with standard, full-width, and sidebar layouts for pages and posts."
+msgstr "Hariko は 980px のコンテンツ幅と 1180px のワイドレイアウトを提供し、固定ページと投稿用に標準・フルワイド・サイドバー付きのレイアウトを備えています。"
+
+#: patterns/front-page.php:58
+msgid "Usage"
+msgstr "使い方"
+
+#: patterns/front-page.php:62
+msgid "For general styling, you can use the style settings (typography, colors, layout, blocks) in the site editor. For more specific customization, you can add or modify templates as needed."
+msgstr "基本的なスタイルはサイトエディターのスタイル設定(タイポグラフィ、色、レイアウト、ブロック)で変更できます。より細かいカスタマイズは、必要に応じてテンプレートの追加や変更を行ってください。"
+
+#: patterns/front-page.php:66
+msgid "Posts"
+msgstr "投稿"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "ベース"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base / Two"
+msgstr "ベース 2"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "コントラスト"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "プライマリー"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary (accent only)"
+msgstr "セカンダリー(アクセントのみ)"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "ターシャリー"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Light Gray"
+msgstr "ライトグレー"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Gray"
+msgstr "グレー"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Dark Gray"
+msgstr "ダークグレー"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Sans serif"
+msgstr "サンセリフ"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Serif"
+msgstr "セリフ"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "ヘッダー"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "フッター"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Posts"
+msgstr "投稿一覧"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single with sidebar"
+msgstr "サイドバー付き(投稿)"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single fullwidth"
+msgstr "フルワイド(投稿)"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page with sidebar"
+msgstr "サイドバー付き(固定ページ)"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page fullwidth"
+msgstr "フルワイド(固定ページ)"

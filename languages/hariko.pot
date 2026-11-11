@@ -1,0 +1,283 @@
+# Copyright (C) 2026 BYTE DESIGN
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hariko 1.0.12\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/hariko\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-11T12:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: hariko\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Hariko"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://hariko.bytedesign.net/"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Hariko is an accessible block theme designed to WCAG 2.2 AA. It includes visible focus indicators for every interactive element, keyboard skip links, sufficient color contrast, reduced-motion support, and works as a base for custom-made sites."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "BYTE DESIGN"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://bytedesign.net/"
+msgstr ""
+
+#. Translators: Label of the "read more" link below post excerpts.
+#: functions.php:70
+msgid "Read More"
+msgstr ""
+
+#. Translators: Label of the link to the previous posts page.
+#: functions.php:72
+msgid "Newer Posts"
+msgstr ""
+
+#. Translators: Label of the link to the next posts page.
+#: functions.php:74
+msgid "Older Posts"
+msgstr ""
+
+#: functions.php:75
+msgid "Search"
+msgstr ""
+
+#: functions.php:76
+msgid "Please try searching."
+msgstr ""
+
+#. Translators: ARIA label of the header navigation area.
+#: functions.php:78
+msgid "Main menu"
+msgstr ""
+
+#: functions.php:79
+msgid "Page Not Found"
+msgstr ""
+
+#: functions.php:80
+msgid "The page you are looking for does not exist, or it has been moved."
+msgstr ""
+
+#: functions.php:81
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: functions.php:82
+msgid "Latest Posts"
+msgstr ""
+
+#: functions.php:83
+msgid "Categories"
+msgstr ""
+
+#: functions.php:84
+msgid "Archives"
+msgstr ""
+
+#: functions.php:85
+msgid "No posts found yet."
+msgstr ""
+
+#: functions.php:86
+#: patterns/front-page.php:26
+msgid "Get started"
+msgstr ""
+
+#. translators: 1: site title markup with a link to the site, 2: linked WordPress name.
+#: functions.php:160
+#, php-format
+msgid "%1$s theme by BYTE DESIGN. Powered by %2$s."
+msgstr ""
+
+#: functions.php:162
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: patterns/front-page.php
+msgctxt "Pattern title"
+msgid "front-page"
+msgstr ""
+
+#: patterns/front-page.php:38
+msgid "Hariko: A Minimalist WordPress Block Theme for Customization"
+msgstr ""
+
+#: patterns/front-page.php:42
+msgid "is a WordPress block editor theme designed with a minimalist aesthetic and built for customization."
+msgstr ""
+
+#: patterns/front-page.php:46
+msgid "It includes ten font-size presets from xs (12px) to xxxxxxl (57px), with a default medium size of 16px, making it an ideal starter theme."
+msgstr ""
+
+#: patterns/front-page.php:50
+msgid "User-Friendly and Versatile Templates"
+msgstr ""
+
+#: patterns/front-page.php:54
+msgid "Hariko provides a 980px content width and an 1180px wide layout, along with standard, full-width, and sidebar layouts for pages and posts."
+msgstr ""
+
+#: patterns/front-page.php:58
+msgid "Usage"
+msgstr ""
+
+#: patterns/front-page.php:62
+msgid "For general styling, you can use the style settings (typography, colors, layout, blocks) in the site editor. For more specific customization, you can add or modify templates as needed."
+msgstr ""
+
+#: patterns/front-page.php:66
+msgid "Posts"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base / Two"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary (accent only)"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Light Gray"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Gray"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Dark Gray"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Default"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Sans serif"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Serif"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Posts"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single with sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single fullwidth"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page with sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page fullwidth"
+msgstr ""
