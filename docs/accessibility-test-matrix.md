@@ -26,7 +26,7 @@ the DB restore: IDs 1844–1860 unchanged, all URLs 200/404 as expected. The scr
 
 | Tool | Scope | Mode |
 | --- | --- | --- |
-| Contrast check of static palette pairs incl. hero-on-`primary` (hero Cover is a solid palette token, §8.2) — all palettes × 18 rules: 180/180 PASS (2026-11-10/11, 10 palettes); **re-run 2026-11-12 on the 8 shipped `styles/colors/*.json` palettes + theme.json default → all pairs ≥ 4.5:1** (minima: `contrast`/`base` 15.2, `primary`/`base` 5.08, `tertiary`/`base` 7.71). Originally `scripts/check-contrast.js` (`npm run contrast`), removed from the repo 2026-11-11 (D-7) — computed by an ad-hoc script from the palette JSONs | historical: `npm run contrast` → 2026-11-12 script |
+| Contrast check of static palette pairs incl. hero-on-`primary` (hero Cover is a solid palette token, §8.2) — all palettes × 18 rules: 180/180 PASS (2026-11-10/11, 10 palettes); **re-run 2026-11-12 on the 8 shipped `styles/colors/*.json` palettes + theme.json default → all pairs ≥ 4.5:1** (minima: `contrast`/`base` 15.2, `primary`/`base` 5.08, `tertiary`/`base` 7.71). Originally `scripts/check-contrast.js` (`npm run contrast`), removed from the repo 2026-11-11 (D-7) | Originally `scripts/check-contrast.js` (`npm run contrast`) — computed by an ad-hoc script from the palette JSONs after D-7 | historical: `npm run contrast` → 2026-11-12 script |
 | axe-core 4.10.2 (CDN copy, injected) | DOM rules incl. `color-contrast` on computed styles | script pipeline: serve lib on :8890 → inject → run → collect JSON |
 | OpenCode browser | keyboard traversal (real key presses), focus visibility, zoom emulation, motion | `evaluate` + `press` + `screenshot` |
 | Lighthouse **13.6.0** CLI (`--only-categories=accessibility --chrome-flags='--headless=new --no-sandbox'`) | bundled axe + DOM audit superset | headless Chrome |
@@ -78,30 +78,72 @@ Status column reflects the latest run against live wp-env. Rows re-verified on 2
 
 ## 4. WCAG 2.2 AA test matrix
 
+> **Coverage note (2026-11-12 gap review).** Every WCAG 2.2 Level A + AA success criterion is now covered by a row below, by the §4.1 N/A/implicit-coverage table, or by a §5/§7 manual row. The review added the rows marked *(added 2026-11-12)*, renumbered the former "2.4.11" row to **2.4.13** (Focus Appearance is 2.4.13 in WCAG 2.2; 2.4.11 is Focus Not Obscured — see the corrected pair below), and opened **O-08** for the one genuinely new gap (3.1.2).
+
 | Test | Where | Status |
 | --- | --- | --- |
+| 1.1.1 non-text content *(added 2026-11-12)* | axe `image-alt` + HTML audit | PASS — 0 images missing alt on 7/7 pages (§8.3); decorative footer icons use `alt=""` next to the redundant text link (§8.3 note) |
+| 1.3.1 info & relationships *(added 2026-11-12)* | axe structure/landmark/heading rules | PASS — semantic landmarks, one `<h1>`, labelled nav/search regions, core list/table structure; evidence = axe full-rule runs 0 violations (§8.3) |
+| 1.3.2 meaningful sequence *(added 2026-11-12)* | DOM order vs visual order (Tab walk + source) | PASS — DOM order = visual order on every page (2.4.3 traversal evidence, §8.3) |
+| 1.4.1 use of color *(added 2026-11-12)* | source/computed-style audit of links | PASS — links carry underlines, not colour alone (F-01 fix; footer underline `rgb(26,26,26)`; core link styles back via `wp-block-styles` restored in D-8); survival under forced colours = M-05 |
 | 1.4.3 / 1.4.6 contrast | script + axe + Lighthouse | PASS — 2026-11-12 re-run: axe `color-contrast` 0 violations / 0 incomplete on 7 pages, Lighthouse contrast audits 0 failing on 5 scoreable pages (§8.3); palette token pairs all ≥ 4.5:1 |
 | 1.4.4 resize 200% | browser zoom emulation | PASS (2026-11-11, 2×/4× on 6 URLs, M-04 machine side) |
 | 1.4.10 reflow 320px | viewport emulation | PASS (2026-11-11, no h-overflow); 2026-11-12 spot re-check: `document.scrollWidth == clientWidth` on the live page, 0 overflowing elements, responsive-nav toggle present |
 | 1.4.11 UI component contrast (focus, borders, buttons) | script (3:1) | PASS — focus ring `contrast` (#1a1a1a) on `base`/white surfaces and the `base-2` halo on dark surfaces both ≥ 3:1 |
 | 1.4.12 text spacing | probe | PASS |
 | 1.4.13 hover/focus content | menu/submenu/tooltip areas | MANUAL — the theme ships no tooltip/popover/hover-revealed content; only the responsive-nav drawer (§8.3) |
+| 2.1.1 keyboard *(added 2026-11-12)* | axe keyboard-access rules + real `Tab` traversal | PASS — 0 keyboard-access violations on 7 pages (§3.2, §8.3); every interaction reachable by keyboard (the theme ships no front-end JS or pointer-only handlers — see §4.1) |
 | 2.1.2 no trap | full-page tab traversal, both viewports | PASS — 2026-11-12 real-`Tab` traversal, 7 pages: no cycle/trap, focus wraps last→first on every page (§8.3) |
 | 2.4.1 bypass | skip link first stop | PASS — skip link is stop #1 on all 7 pages and reaches `<main id="content">` (§8.3) |
+| 2.4.2 page titled *(added 2026-11-12)* | live `<title>` audit | PASS — distinct, descriptive `<title>` via core `wp_get_document_title()` on every page checked 2026-11-12: `Hariko – ブロックエディタ対応で日本人向けのスターターテーマ。` (front) · `セットアップ – Hariko` (archive) · `“test” の検索結果 – Hariko` (search) · `サンプルページ – Hariko` (page) · `ページが見つかりませんでした – Hariko` (404) |
 | 2.4.3 focus order | traversal order audit | PASS — 2026-11-12 real-`Tab` traversal: home 13 · single 12 · sidebar page 21 · archive 14 (+14 on page 2) · search 8 · 404 10 stops. Order = skip→site-title→nav→(sidebar: search, latest posts, categories, archives)→main→(pagination)→footer search→footer links; logical on every page (§8.3). Supersedes the 2026-11-11 46-stop walk on the pre-D-8 page set |
 | 2.4.4 link purpose | source audit of query/pagination links | PASS (title text; date links have text; post thumbnail links carry the title text — 0 axe `link-name` violations 2026-11-12) |
+| 2.4.5 multiple ways *(added 2026-11-12)* | template audit | PASS — site-wide nav menu (`parts/header.html`) + Search blocks (footer/sidebar/404) give ≥2 ways to find content; header/footer identical on every page (not a set of pages case — single consistent set) |
+| 2.4.6 headings & labels *(added 2026-11-12)* | axe `heading-order` + label audit | PASS — one descriptive `<h1>` per page, no skipped levels (A-07); labels descriptive and identical across instances (`検索`, sidebar `最新投稿`/`カテゴリー`/`アーカイブ` verified live 2026-11-12) — cross-page consistency itself stays M-01/3.2.4 |
 | 2.4.7 visible focus | computed style at every stop | PASS — 2026-11-12: 0 stops with a hidden/`outline: 0` ring across all 7 pages (§8.3); human visual check at each viewport/zoom kept as M-04 |
-| 2.4.11 focus appearance | ring ≥2px, offset | PASS — declared `outline: 3px solid contrast` + 2px offset + 6px `base-2` halo; computed at stops = `solid 2.74px rgb(26,26,26)`, offset 1.83px (≥2px, ≥0.1× line width) on 100% of stops; human visual check M-04 |
+| 2.4.11 focus not obscured (min) *(added 2026-11-12)* | CSS audit + Tab walk | PASS — **0** `position: fixed/sticky` rules in `assets/`, `parts/`, `templates/`, `patterns/` (grep 2026-11-12), so no persistent UI covers a focused element; the only viewport-covering layer is the core responsive drawer, which exists only while open (focus lives inside it) |
+| 2.4.13 focus appearance *(renumbered 2026-11-12 — this row was mislabeled "2.4.11"; Focus Appearance is 2.4.13 in WCAG 2.2)* | ring ≥2px, offset | PASS — declared `outline: 3px solid contrast` + 2px offset + 6px `base-2` halo; computed at stops = `solid 2.74px rgb(26,26,26)`, offset 1.83px (≥2px, ≥0.1× line width) on 100% of stops; human visual check M-04 |
 | 2.5.8 target size ≥24px | computed size audit all interactive els | **FAIL → F-02 fixed**; re-run clean — 0 violations/0 incomplete (incl. axe `target-size` on `/`, 73 nodes); re-run 2026-11-12 on 7 pages: still 0 |
+| 2.5.3 label in name *(added 2026-11-12)* | accessible-name vs visible-label audit | PASS — text controls have name = visible text (`検索` submit); icon-only controls carry `aria-label` with no visible text to conflict (`メニューを開く`/`メニューを閉じる`, live 2026-11-12); no abbreviations/truncation in names; voice-control comfort = M-01/M-02 |
 | 3.1.1 lang | audit | PASS — `<html lang="ja">` on 7/7 pages (2026-11-12) |
+| 3.1.2 lang of parts *(added 2026-11-12)* | rendered-text audit for foreign-language runs | **OPEN → O-08** — spot grep 2026-11-12 found no visible English runs on the current ja pages (sidebar headings render 検索/最新投稿/カテゴリー/アーカイブ), but D-8's translation layer is catalog-based: any string missing a catalog entry renders English inside `lang="ja"` (SR mis-pronunciation). Audit ja/en pairs at M-01/M-02 |
+| 3.2.1 on focus / 3.2.2 on input *(added 2026-11-12)* | source + DOM audit | PASS — theme ships **no front-end JS** (`assets/` has only `theme.css`) and 0 inline handlers, so nothing changes on focus; the only form is the search block — free-text input + explicit submit, no auto-submit-on-change, no context change on input |
 | 3.2.3 consistent navigation | home/post/page/archive diff | MANUAL |
 | 3.2.4 consistent identification | same-labeled components | MANUAL |
 | 3.3.1 / 3.3.2 forms | search + comment form | MANUAL (search labels automated PASS — footer + sidebar instances re-audited 2026-11-12; comment form has no rendered instance — templates lack comments block, see O-03) |
-| 4.1.2 name/role/value | axe + SR spot checks | axe PASS — 0 violations 2026-11-12 on 7 pages (incl. `button-name`, `link-name`, `label`, `role-support`); SR MANUAL (M-01/M-02) |
+| 4.1.2 name/role/value | axe + SR spot checks | axe PASS — 0 violations 2026-11-12 on 7 pages (incl. `button-name`, `link-name`, `label`, `role-support`); states verified live 2026-11-12: `aria-current="page"` on the current nav item; SR MANUAL (M-01/M-02) |
 
 Page types exercised — **2026-11-12 (current page set, §8.3)**: front page `/` (static page 186, hero Cover inside `<main>` + post loop), singular post `/child/hariko-business/`, page with sidebar `/sample-page/`, category archives `/category/child/` `/category/setup/` `/category/design/` (incl. paginated page 2), search results `/?s=test`, 404 (wrong URL).
 
 Page types exercised — **2026-11-10/11 (legacy fixtures, §8.1–§8.2, no longer in the local DB)**: sticky singular, full-width page/single via `page-fullwidth` / `single-fullwidth` templates, widget-test pages `/products/` + `/products/widget/`, `/about-2/`, `/category/news/`. Template files themselves are still covered by the 2026-11-12 run wherever a current URL renders the same template; the *template-assignment* variants (full-width, with-sidebar single) are re-coverable by assigning `_wp_page_template` to any current post/page.
+
+### 4.1 Criteria with no applicable theme-side content (gap review 2026-11-12)
+
+Each row records *why* the criterion needs no theme-side test, based on a source audit (2026-11-12) over
+`assets/`, `parts/`, `templates/`, `patterns/`, `functions.php` plus the live rendered pages.
+
+| Criterion | Disposition | Evidence |
+| --- | --- | --- |
+| 1.2.1–1.2.5 (captions, audio/video alternatives) | **N/A** | theme ships no audio/video content; any media is user content (Theme Check found no media elements in the templates) |
+| 1.3.3 sensory characteristics | **PASS (implicit)** | instructions are text-only; nothing described by shape/size/position only (no icon-only instructions; icon controls are labelled — §4 2.5.3) |
+| 1.3.4 orientation | **PASS** | no `orientation:`/landscape-only CSS (grep 0 hits), no viewport orientation lock; layout is the same `max-width` responsive stack in either rotation |
+| 1.3.5 identify input purpose | **N/A** | only `input` in the theme is the Search block (`type="search"`, free-text) — no user-data fields, so no `autocomplete` token applies |
+| 1.4.2 audio control | **N/A** | no auto-playing audio anywhere (no media, no autoplay markup) |
+| 2.1.4 character key shortcuts | **N/A** | theme defines no keyboard shortcuts (no JS at all — `assets/` contains only `theme.css`) |
+| 2.2.1 timing adjustable | **N/A** | no time limits: no meta refresh, no JS timers, no session-expiry UI in theme output |
+| 2.2.2 pause, stop, hide | **PASS** | no moving/scrolling/auto-updating content; the only motion is `scroll-behavior: smooth` for user-initiated anchor jumps, zeroed by `prefers-reduced-motion` (§3.3) |
+| 2.5.1 pointer gestures | **N/A** | no multipointor or path-based gestures — every theme control is a single-tap click/link |
+| 2.5.2 pointer cancellation | **PASS (implicit)** | theme registers no pointer handlers (up=click only, browser default activation) |
+| 2.5.4 motion actuation | **N/A** | no motion/tilt input used |
+| 2.5.7 dragging movements | **N/A** | nothing draggable in front-end output (editor-side dragging is core UI, M-09) |
+| 3.2.6 consistent help | **N/A** | no help mechanisms in theme output; "help" is identically absent on every page, so consistency holds vacuously |
+| 3.3.3 error suggestion | **N/A** | only form is the search block; empty/failed searches land on core's results page, native `required`-free input, nothing for the theme to suggest |
+| 3.3.4 error prevention (legal/financial) | **N/A** | no submissions with legal/financial consequences |
+| 3.3.7 redundant entry | **N/A** | no multi-step forms; core login/register are out of theme scope |
+| 4.1.1 parsing | **Removed in WCAG 2.2** | kept as regression anyway: 0 duplicate IDs + valid nesting in the §8.3 structure audit |
+| 4.1.3 status messages | **N/A** | no JS updates content without page load (theme has no front-end JS); search results count arrives with the full page load |
+
+AAA criteria (1.4.7–1.4.9, 2.2.3–2.2.6, 2.4.12, 2.5.5–2.5.6, 3.1.3–3.1.7, 3.2.5, 3.3.5–3.3.6) are out of the AA scope of this review.
 
 ## 5. Screen reader matrix (manual)
 
@@ -155,7 +197,7 @@ Note: all automated items green (A-05 pending manual visual confirmation of F-01
 
 | # | Item | Where | Status |
 | --- | --- | --- | --- |
-| M-01 | NVDA (Firefox/Chrome): landmarks, H-levels, tab order, 2.5.13 target feel | all templates | |
+| M-01 | NVDA (Firefox/Chrome): landmarks, H-levels, tab order, 2.5.8 target feel, 3.1.2 ja/en mixing (O-08) | all templates | |
 | M-02 | VoiceOver (Safari/macOS) same | all templates | |
 | M-03 | VoiceOver (iOS) + TalkBack (Android): touch target comfort, double-tap | home/post/menu | |
 | M-04 | Real 200% zoom (Ctrl+Plus) & mobile width: no clipping/h-overflow | all templates | |
@@ -319,10 +361,11 @@ Row IDs match §6. **Date = latest run against the current tree (theme 1.0.12, a
 | M-05 Forced colors (Windows high contrast) | human, OS setting | — | PENDING (user-side) | not reachable from this harness. 2026-11-12 source check: **no** `forced-colors` / `forced-color-adjust` / `-ms-high-contrast` rules in the theme, so the browser's forced palette applies unopposed — expected outcome is full usability with the system focus colour |
 | M-08 Theme Check plugin | Theme-Check 20251017 (1028 tests), WP 7.1.x | 2026-11-11 | PASS except expected findings | REQUIRED ×1 was `scripts/wp-cli-fixtures.sh` (shell script) — that directory no longer exists (D-7), so the finding cannot recur. `functions.php` changed substantially since (D-8 localization) → **re-run before the WP.org submission (O-06)**. Earlier "Tested up to" RECOMMENDED was fixed by setting `style.css` to major.minor `7.1`; INFO ×2 normal (single text domain, accessibility-ready review note); plugin deactivated + deleted after the audit |
 | M-09 Editor a11y | human, wp-admin | — | PENDING (user-side) | editor/site-editor UI is core-generated (theme supplies palette + `theme.json` settings only) |
+| §4/§4.1 checklist gap review | WCAG 2.2 A+AA cross-check against the checklist + fresh source/live audits (titles, fixed/sticky, handlers, labels, `aria-current`) | 2026-11-12 | **DONE** — 12 new §4 rows, §4.1 N/A table added, 2 numbering errors fixed (2.4.11→2.4.13 row, M-01 2.5.13→2.5.8), one gap opened (O-08) | no new failures surfaced; all added PASS rows carry 2026-11-12 evidence |
 
-**Timeline.** 2026-11-10: F-01/F-02/F-03 fixed and re-verified (§8.1) · 2026-11-10b: hero palette-following + header-search removal (§8.2) · 2026-11-11: automated pass complete on the pre-D-8 tree, machine parts of M-04/M-06/M-07/M-08 green · **2026-11-12: D-8 re-verification on the current tree (§8.3) — axe 0 violations/0 incomplete × 7 pages, Lighthouse 100 × 5 pages, keyboard traversal/focus indicators, contrast over all shipped palettes, skip link and reduced motion all green.**
+**Timeline.** 2026-11-10: F-01/F-02/F-03 fixed and re-verified (§8.1) · 2026-11-10b: hero palette-following + header-search removal (§8.2) · 2026-11-11: automated pass complete on the pre-D-8 tree, machine parts of M-04/M-06/M-07/M-08 green · **2026-11-12: D-8 re-verification on the current tree (§8.3) — axe 0 violations/0 incomplete × 7 pages, Lighthouse 100 × 5 pages, keyboard traversal/focus indicators, contrast over all shipped palettes, skip link and reduced motion all green.** · 2026-11-12b: WCAG 2.2 A+AA gap review of this checklist — §4 coverage note + 12 new rows, §4.1 N/A table, numbering fixes, O-08 opened.
 
-**Still open before any conformance or `accessibility-ready` claim may be published:** M-01, M-02, M-03, M-05, M-09 and the human-eye half of M-04 (need Windows / macOS-iOS / Android hardware), the M-08 re-run (O-06), plus the O-01…O-05 items below.
+**Still open before any conformance or `accessibility-ready` claim may be published:** M-01, M-02, M-03, M-05, M-09 and the human-eye half of M-04 (need Windows / macOS-iOS / Android hardware), the M-08 re-run (O-06), plus the O-01…O-08 items below.
 
 ## Open items
 
@@ -333,3 +376,4 @@ Row IDs match §6. **Date = latest run against the current tree (theme 1.0.12, a
 - O-05: hero + footer-search layout is design-level (F-03 → §8.2 → D-8 "c案") — the current implementation lives directly in `templates/front-page.html` and `parts/footer.html`; `patterns/front-page.php` is now **unused** and pending deletion/cleanup, so revert instructions point at the templates, not the pattern.
 - O-06: **re-run Theme Check (M-08) before the WP.org submission** — `functions.php` gained the localization layer (D-8) and `scripts/` is gone since the 2026-11-11 scan.
 - O-07: SR phrasing checks (D-8 items) that only a human with NVDA/VoiceOver can confirm: footer search region announcement, static-front-page hero reading order, sidebar heading sequence.
+- O-08: **3.1.2 lang-of-parts audit (opened by the 2026-11-12 gap review)** — D-8's translation layer (`hariko_translate_block_attributes()` + `render_block_core/*` filters in `functions.php`) is catalog-based: any block string without a catalog entry renders English inside a `lang="ja"` page (and vice versa on `en`), which SRs mis-pronounce. Spot grep 2026-11-12 found no visible English runs on the current ja pages, but this is not exhaustively verifiable from source. During M-01/M-02, listen for English fragments on ja pages; if any remain, fix by translating (catalog) or marking the run with `lang="en"`.
