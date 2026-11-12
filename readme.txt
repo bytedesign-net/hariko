@@ -67,8 +67,8 @@ Hariko is a minimalist WordPress block theme designed for flexibility and custom
 
 == Copyright ==
 
-hariko WordPress Theme, (C) 2024
-hariko is distributed under the terms of the GNU GPL.
+Hariko WordPress Theme, (C) 2024
+Hariko is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
