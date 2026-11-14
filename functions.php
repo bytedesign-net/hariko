@@ -9,6 +9,13 @@
  * @package Hariko
  */
 
+/**
+ * Sets up the theme's core features and loads the theme translations.
+ *
+ * Registers support for core block styles (wp-block-styles) and editor
+ * styles (editor-styles) and loads the just-in-time editor stylesheet
+ * editor-style.css.
+ */
 add_action( 'after_setup_theme', 'hariko_setup' );
 function hariko_setup() {
 	load_theme_textdomain( 'hariko', get_theme_file_path( 'languages' ) );
@@ -46,6 +53,12 @@ function hariko_load_textdomain_mofile( $mofile, $domain ) {
 	return is_readable( $alt ) ? $alt : $mofile;
 }
 
+/**
+ * Enqueues the theme's stylesheet.
+ *
+ * Uses the theme version from style.css as the stylesheet version so
+ * browsers pick up a new copy on every theme update.
+ */
 add_action( 'wp_enqueue_scripts', 'hariko_enqueue_styles' );
 function hariko_enqueue_styles() {
 	wp_enqueue_style(
