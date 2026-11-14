@@ -25,3 +25,4 @@ pnpm-debug.log*
 # Local development tooling; not part of the distributed theme.
 package.json
 package-lock.json
+scripts/
