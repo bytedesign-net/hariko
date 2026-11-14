@@ -3,11 +3,11 @@ Theme Name: Hariko
 Theme URI: https://hariko.bytedesign.net/
 Author: BYTE DESIGN
 Author URI: https://bytedesign.net/
-Description: Hariko is an accessible block theme designed to WCAG 2.2 AA. It includes visible focus indicators for every interactive element, keyboard skip links, sufficient color contrast, reduced-motion support, and works as a base for custom-made sites.
-Requires at least: 6.7
+Description: Hariko is a minimalist WordPress block theme designed for flexibility and customization. It includes preset colors, typography, content and wide layout sizes, reusable template parts, and standard, full-width, and sidebar templates for pages and posts. All theme text is translatable through the `hariko` text domain, and translations into Japanese, Simplified and Traditional Chinese, Korean, Spanish, French, German and Italian are bundled in the download.
+Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 7.2
-Version: 1.0.12
+Version: 1.0.13
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: hariko

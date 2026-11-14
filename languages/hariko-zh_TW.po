@@ -1,0 +1,467 @@
+# Copyright (C) 2026 BYTE DESIGN
+# This file is distributed under the GNU General Public License v2 or later.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Hariko 1.0.13\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/hariko\n"
+"Last-Translator: BYTE DESIGN\n"
+"Language-Team: BYTE DESIGN\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-14T00:14:34+00:00\n"
+"PO-Revision-Date: 2026-11-14 00:00+0900\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: hariko\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Hariko"
+msgstr "Hariko"
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://hariko.bytedesign.net/"
+msgstr "https://hariko.bytedesign.net/"
+
+#. Description of the theme
+#: style.css
+msgid "Hariko is a minimalist WordPress block theme designed for flexibility and customization. It includes preset colors, typography, content and wide layout sizes, reusable template parts, and standard, full-width, and sidebar templates for pages and posts. All theme text is translatable through the `hariko` text domain, and translations into Japanese, Simplified and Traditional Chinese, Korean, Spanish, French, German and Italian are bundled in the download."
+msgstr "Hariko 是一款專為靈活性與客製化設計的極簡 WordPress 區塊佈景主題。內建顏色預設、字型排印、內容寬度與寬版佈局尺寸、可重複使用的範本部件，以及適用於頁面與文章的標準、全寬與側欄範本。所有主題文字皆可透過 `hariko` 文字域翻譯，下載包內附日語、簡體中文、繁體中文、韓語、西班牙語、法語、德語與義大利語翻譯。"
+
+#. Author of the theme
+#: style.css
+msgid "BYTE DESIGN"
+msgstr "BYTE DESIGN"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://bytedesign.net/"
+msgstr "https://bytedesign.net/"
+
+#. Translators: Label of the "read more" link below post excerpts.
+#: functions.php:74
+msgid "Read More"
+msgstr "閱讀更多"
+
+#. Translators: Label of the link to the previous posts page.
+#: functions.php:76
+msgid "Newer Posts"
+msgstr "較新的文章"
+
+#. Translators: Label of the link to the next posts page.
+#: functions.php:78
+msgid "Older Posts"
+msgstr "較舊的文章"
+
+#: functions.php:79
+msgid "Search"
+msgstr "搜尋"
+
+#: functions.php:80
+msgid "Please try searching."
+msgstr "請嘗試搜尋。"
+
+#. Translators: ARIA label of the header navigation area.
+#: functions.php:82
+msgid "Main menu"
+msgstr "主選單"
+
+#: functions.php:83
+msgid "Page Not Found"
+msgstr "找不到頁面"
+
+#: functions.php:84
+msgid "The page you are looking for does not exist, or it has been moved."
+msgstr "您尋找的頁面不存在或已被移動。"
+
+#: functions.php:85
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "很抱歉，沒有符合您搜尋結果的內容。請嘗試其他關鍵字。"
+
+#: functions.php:86
+msgid "Latest Posts"
+msgstr "最新文章"
+
+#: functions.php:87
+msgid "Categories"
+msgstr "分類"
+
+#: functions.php:88
+msgid "Archives"
+msgstr "彙整"
+
+#: functions.php:89
+msgid "No posts found yet."
+msgstr "暫時沒有文章。"
+
+#: functions.php:90
+#: patterns/hero.php:23
+msgid "Get started"
+msgstr "開始使用"
+
+#. translators: 1: site title markup with a link to the site, 2: linked WordPress name.
+#: functions.php:165
+#, php-format
+msgid "%1$s theme by BYTE DESIGN. Powered by %2$s."
+msgstr "佈景主題 %1$s 由 BYTE DESIGN 製作，由 %2$s 驅動。"
+
+#: functions.php:167
+msgid "https://wordpress.org/"
+msgstr "https://tw.wordpress.org/"
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "faq"
+msgstr "常見問題"
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Frequently asked questions built with the core/accordion blocks from WordPress 6.9. The first question opens by default, every question is a real heading and the answers are keyboard accessible without any custom JavaScript."
+msgstr "使用 WordPress 6.9 的 core/accordion 區塊建構的常見問題。第一個問題預設展開，每個問題都是真正的標題，無需任何自訂 JavaScript 即可透過鍵盤存取答案。"
+
+#: patterns/faq.php:11
+msgid "Frequently Asked Questions"
+msgstr "常見問題"
+
+#: patterns/faq.php:17
+msgid "What is the Hariko theme?"
+msgstr "Hariko 佈景主題是什麼？"
+
+#: patterns/faq.php:22
+msgid "Hariko is a block theme with fluid typography, ten font-size presets and nine color style variations. It is intentionally minimal, so it works as a starter theme for your own projects."
+msgstr "Hariko 是一款區塊佈景主題，具備流式排版、十種字型大小預設與九種顏色樣式變體。它刻意保持極簡，因此也能作為您自有專案的起始主題。"
+
+#: patterns/faq.php:29
+msgid "Do I need to edit theme.json to customize it?"
+msgstr "自訂主題需要編輯 theme.json 嗎？"
+
+#: patterns/faq.php:34
+msgid "No. Colors, typography and layout are editable in the Site Editor, and the style variations let you switch the whole appearance with one click. theme.json is only there when you want to change the defaults for the entire site."
+msgstr "不需要。顏色、排版與版面配置都可以在網站編輯器中編輯，樣式變體還能讓您一鍵切換整體外觀。只有當您想變更整個網站的預設值時，才需要用到 theme.json。"
+
+#: patterns/faq.php:41
+msgid "How does this accordion work?"
+msgstr "這個手風琴是如何運作的？"
+
+#: patterns/faq.php:46
+msgid "It is the core accordion block, shipped with WordPress 6.9. WordPress loads a small accessibility script only on pages that use the block, and the open state also works without JavaScript."
+msgstr "它是 WordPress 6.9 內建的手風琴核心區塊。WordPress 只會在使用該區塊的頁面載入一個小型無障礙腳本，即使沒有 JavaScript，展開狀態也能保持。"
+
+#: patterns/front-page.php
+msgctxt "Pattern title"
+msgid "front-page"
+msgstr "首頁"
+
+#: patterns/front-page.php:16
+msgid "Hariko: A Minimalist WordPress Block Theme for Customization"
+msgstr "Hariko：可高度客製化的極簡 WordPress 區塊佈景主題"
+
+#: patterns/front-page.php:20
+msgid "is a WordPress block editor theme designed with a minimalist aesthetic and built for customization."
+msgstr "是一款以極簡美學設計、為了客製化而打造的 WordPress 區塊編輯器佈景主題。"
+
+#: patterns/front-page.php:24
+msgid "It includes ten font-size presets from xs (12px) to 6-xl (57px), with a default medium size of 16px, making it an ideal starter theme."
+msgstr "內建從 xs（12px）到 6-xl（57px）共 10 種字型大小預設，預設中等大小為 16px，是理想的起始佈景主題。"
+
+#: patterns/front-page.php:28
+msgid "User-Friendly and Versatile Templates"
+msgstr "易用且多用途的範本"
+
+#: patterns/front-page.php:32
+msgid "Hariko provides a 980px content width and an 1180px wide layout, along with standard, full-width, and sidebar layouts for pages and posts."
+msgstr "Hariko 提供 980px 內容寬度和 1180px 寬版佈局，並為頁面與文章提供標準、全寬與側欄佈局。"
+
+#: patterns/front-page.php:36
+msgid "Usage"
+msgstr "使用方式"
+
+#: patterns/front-page.php:40
+msgid "For general styling, you can use the style settings (typography, colors, layout, blocks) in the site editor. For more specific customization, you can add or modify templates as needed."
+msgstr "一般樣式可以在網站編輯器中使用樣式設定（排版、顏色、佈局和區塊）進行調整。若需更進一步的客製化，可以依需求新增或修改範本。"
+
+#: patterns/front-page.php:44
+msgid "Posts"
+msgstr "文章"
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "hero"
+msgstr "主視覺"
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "A call-to-action banner whose heading, text and button label can be edited directly, without opening the block settings. The values are stored as pattern overrides, so they persist even when the theme or another plugin registers a pattern with the same slug."
+msgstr "可直接編輯標題、內文和按鈕文字的行動呼籲橫幅，無需開啟區塊設定。這些值以樣板覆寫的形式儲存，即使佈景主題或其他外掛註冊了相同別名的樣板也會保留。"
+
+#: patterns/hero.php:18
+msgid "Build something people remember"
+msgstr "打造令人難忘的作品"
+
+#: patterns/hero.php:19
+msgid "Hariko ships with fluid typography, nine color style variations and responsive block styles, so you can focus on the content."
+msgstr "Hariko 內建流式字型排印、九種顏色樣式變體與響應式區塊樣式，讓您可以專心處理內容。"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "基礎"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Base / Two"
+msgstr "基礎 / 二"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "對比"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "主色"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Secondary (accent only)"
+msgstr "輔色（僅強調）"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "第三色"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Light Gray"
+msgstr "淺灰色"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Gray"
+msgstr "灰色"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Dark Gray"
+msgstr "深灰色"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr "XS"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr "S"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr "M"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr "L"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr "XL"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2XL"
+msgstr "2XL"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3XL"
+msgstr "3XL"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Default"
+msgstr "預設"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Sans serif"
+msgstr "無襯線"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Serif"
+msgstr "襯線"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "頁首"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "頁尾"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Posts"
+msgstr "文章列表"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr "側欄"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single with sidebar"
+msgstr "附側欄的文章"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single fullwidth"
+msgstr "全寬文章"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page with sidebar"
+msgstr "附側欄的頁面"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page fullwidth"
+msgstr "全寬頁面"
+
+#: styles/colors/amber.json
+msgctxt "Style variation name"
+msgid "Amber"
+msgstr "琥珀"
+
+#: styles/colors/cocoa.json
+msgctxt "Style variation name"
+msgid "Cocoa"
+msgstr "可可"
+
+#: styles/colors/crimson.json
+msgctxt "Style variation name"
+msgid "Crimson"
+msgstr "緋紅"
+
+#: styles/colors/forest.json
+msgctxt "Style variation name"
+msgid "Forest"
+msgstr "森林"
+
+#: styles/colors/lemon.json
+msgctxt "Style variation name"
+msgid "Lemon"
+msgstr "檸檬"
+
+#: styles/colors/olive.json
+msgctxt "Style variation name"
+msgid "Olive"
+msgstr "橄欖"
+
+#: styles/colors/plum.json
+msgctxt "Style variation name"
+msgid "Plum"
+msgstr "梅子"
+
+#: styles/colors/rose.json
+msgctxt "Style variation name"
+msgid "Rose"
+msgstr "玫瑰"
+
+#: styles/colors/slate.json
+msgctxt "Style variation name"
+msgid "Slate"
+msgstr "板岩"

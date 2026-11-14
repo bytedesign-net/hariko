@@ -1,16 +1,26 @@
 === Hariko ===
 Tags: accessibility-ready, block-styles, translation-ready
-Requires at least: 6.7
+Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Hariko is a minimalist WordPress block theme designed for flexibility and customization. It includes preset colors, typography, content and wide layout sizes, reusable template parts, and standard, full-width, and sidebar templates for pages and posts. All theme text is translatable through the `hariko` text domain, and a Japanese translation is bundled in the download.
+Hariko is a minimalist WordPress block theme designed for flexibility and customization. It includes preset colors, typography, content and wide layout sizes, reusable template parts, and standard, full-width, and sidebar templates for pages and posts. All theme text is translatable through the `hariko` text domain, and translations into Japanese, Simplified and Traditional Chinese, Korean, Spanish, French, German and Italian are bundled in the download.
 
 == Changelog ==
+= 1.0.13 =
+* Added interactive state styles to `theme.json`: `:hover`, `:focus`, `:focus-visible` and `:active` for buttons, links and navigation links, plus the `-current` custom state that highlights the active item in the navigation block.
+* Declared the responsive viewport breakpoints used by the new `@mobile` / `@tablet` block styles explicitly in `settings.viewport` (`480px` / `782px`, matching the WordPress core defaults), and added responsive styles to the front page intro heading and the navigation links.
+* Added the `hariko/hero` banner pattern: heading, text and button label are edited inline through pattern overrides and Block Bindings (`core/pattern-overrides`), with gettext fallbacks for older WordPress versions.
+* Added the `hariko/faq` pattern: a frequently asked questions section built with the `core/accordion` blocks introduced in WordPress 6.9, with theme styles for the item separators, heading weight and hover state added to `theme.json`.
+* Fixed the hidden `hariko/front-page` pattern rendering a whole page (header template part, duplicate hero cover and footer) inside the front page content; it now provides only the intro text and the post list, since the `front-page` template supplies the header, hero and content wrappers.
+* Added bundled translations for Simplified and Traditional Chinese, Korean, Spanish, French, German and Italian, and updated the Japanese catalogue.
+* Raised `Requires at least` to 6.9, the first release with Block Bindings.
+* Changed the size preset slugs to a clearer numeric scale: font sizes `xxl` through `xxxxxxl` are now `2-xl` through `6-xl`, spacing sizes `xxl` and `xxxl` are now `2-xl` and `3-xl`, and every font size preset now carries a label (`XS` through `6XL`) in the editor picker. Legacy CSS variables and classes are aliased to the new presets in `theme.json`, so content and templates built with earlier Hariko versions render unchanged.
+
 = 1.0.12 =
 * Added multilingual support: theme text now runs through gettext, with a `languages/hariko.pot` catalogue and a bundled Japanese translation (`languages/hariko-ja.mo`).
 * Added a search form to the footer template part.

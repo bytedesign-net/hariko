@@ -1,0 +1,467 @@
+# Copyright (C) 2026 BYTE DESIGN
+# This file is distributed under the GNU General Public License v2 or later.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Hariko 1.0.13\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/hariko\n"
+"Last-Translator: BYTE DESIGN\n"
+"Language-Team: BYTE DESIGN\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-14T00:14:34+00:00\n"
+"PO-Revision-Date: 2026-11-14 00:00+0900\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: hariko\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Hariko"
+msgstr "Hariko"
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://hariko.bytedesign.net/"
+msgstr "https://hariko.bytedesign.net/"
+
+#. Description of the theme
+#: style.css
+msgid "Hariko is a minimalist WordPress block theme designed for flexibility and customization. It includes preset colors, typography, content and wide layout sizes, reusable template parts, and standard, full-width, and sidebar templates for pages and posts. All theme text is translatable through the `hariko` text domain, and translations into Japanese, Simplified and Traditional Chinese, Korean, Spanish, French, German and Italian are bundled in the download."
+msgstr "Hariko est un thème à blocs WordPress minimaliste conçu pour la flexibilité et la personnalisation. Il comprend des couleurs prédéfinies, une typographie, des tailles de contenu et de mise en page large, des parties de modèle réutilisables, ainsi que des modèles standard, pleine largeur et avec barre latérale pour les pages et les publications. Tout le texte du thème est traduisible via le domaine de texte `hariko`, et les traductions en japonais, chinois simplifié et traditionnel, coréen, espagnol, français, allemand et italien sont incluses dans le téléchargement."
+
+#. Author of the theme
+#: style.css
+msgid "BYTE DESIGN"
+msgstr "BYTE DESIGN"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://bytedesign.net/"
+msgstr "https://bytedesign.net/"
+
+#. Translators: Label of the "read more" link below post excerpts.
+#: functions.php:74
+msgid "Read More"
+msgstr "Lire la suite"
+
+#. Translators: Label of the link to the previous posts page.
+#: functions.php:76
+msgid "Newer Posts"
+msgstr "Publications plus récentes"
+
+#. Translators: Label of the link to the next posts page.
+#: functions.php:78
+msgid "Older Posts"
+msgstr "Publications plus anciennes"
+
+#: functions.php:79
+msgid "Search"
+msgstr "Rechercher"
+
+#: functions.php:80
+msgid "Please try searching."
+msgstr "Veuillez effectuer une recherche."
+
+#. Translators: ARIA label of the header navigation area.
+#: functions.php:82
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: functions.php:83
+msgid "Page Not Found"
+msgstr "Page introuvable"
+
+#: functions.php:84
+msgid "The page you are looking for does not exist, or it has been moved."
+msgstr "La page que vous cherchez n'existe pas ou a été déplacée."
+
+#: functions.php:85
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Désolé, aucun résultat ne correspond à votre recherche. Veuillez réessayer avec d'autres mots-clés."
+
+#: functions.php:86
+msgid "Latest Posts"
+msgstr "Publications récentes"
+
+#: functions.php:87
+msgid "Categories"
+msgstr "Catégories"
+
+#: functions.php:88
+msgid "Archives"
+msgstr "Archives"
+
+#: functions.php:89
+msgid "No posts found yet."
+msgstr "Aucune publication pour le moment."
+
+#: functions.php:90
+#: patterns/hero.php:23
+msgid "Get started"
+msgstr "Commencer"
+
+#. translators: 1: site title markup with a link to the site, 2: linked WordPress name.
+#: functions.php:165
+#, php-format
+msgid "%1$s theme by BYTE DESIGN. Powered by %2$s."
+msgstr "Thème %1$s par BYTE DESIGN. Propulsé par %2$s."
+
+#: functions.php:167
+msgid "https://wordpress.org/"
+msgstr "https://fr.wordpress.org/"
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "faq"
+msgstr "Questions fréquentes"
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Frequently asked questions built with the core/accordion blocks from WordPress 6.9. The first question opens by default, every question is a real heading and the answers are keyboard accessible without any custom JavaScript."
+msgstr "Questions fréquentes réalisées avec les blocs core/accordion de WordPress 6.9. La première question est ouverte par défaut, chaque question est un véritable titre et les réponses sont accessibles au clavier sans JavaScript personnalisé."
+
+#: patterns/faq.php:11
+msgid "Frequently Asked Questions"
+msgstr "Questions fréquentes"
+
+#: patterns/faq.php:17
+msgid "What is the Hariko theme?"
+msgstr "Qu'est-ce que le thème Hariko ?"
+
+#: patterns/faq.php:22
+msgid "Hariko is a block theme with fluid typography, ten font-size presets and nine color style variations. It is intentionally minimal, so it works as a starter theme for your own projects."
+msgstr "Hariko est un thème par blocs avec une typographie fluide, dix préréglages de taille de police et neuf variations de style de couleurs. Il est volontairement minimal, ce qui en fait un thème de départ pour vos propres projets."
+
+#: patterns/faq.php:29
+msgid "Do I need to edit theme.json to customize it?"
+msgstr "Faut-il modifier theme.json pour le personnaliser ?"
+
+#: patterns/faq.php:34
+msgid "No. Colors, typography and layout are editable in the Site Editor, and the style variations let you switch the whole appearance with one click. theme.json is only there when you want to change the defaults for the entire site."
+msgstr "Non. Les couleurs, la typographie et la mise en page sont modifiables dans l’éditeur de site, et les variations de style permettent de changer toute l’apparence en un clic. theme.json n’est utile que lorsque l’on souhaite modifier les valeurs par défaut de tout le site."
+
+#: patterns/faq.php:41
+msgid "How does this accordion work?"
+msgstr "Comment fonctionne cet accordéon ?"
+
+#: patterns/faq.php:46
+msgid "It is the core accordion block, shipped with WordPress 6.9. WordPress loads a small accessibility script only on pages that use the block, and the open state also works without JavaScript."
+msgstr "Il s'agit du bloc accordéon du core, fourni avec WordPress 6.9. WordPress ne charge un petit script d'accessibilité que sur les pages qui utilisent le bloc, et l'état ouvert fonctionne également sans JavaScript."
+
+#: patterns/front-page.php
+msgctxt "Pattern title"
+msgid "front-page"
+msgstr "page d'accueil"
+
+#: patterns/front-page.php:16
+msgid "Hariko: A Minimalist WordPress Block Theme for Customization"
+msgstr "Hariko : un thème à blocs WordPress minimaliste et personnalisable"
+
+#: patterns/front-page.php:20
+msgid "is a WordPress block editor theme designed with a minimalist aesthetic and built for customization."
+msgstr "est un thème pour l'éditeur de blocs de WordPress, à l'esthétique minimaliste, conçu pour être personnalisé."
+
+#: patterns/front-page.php:24
+msgid "It includes ten font-size presets from xs (12px) to 6-xl (57px), with a default medium size of 16px, making it an ideal starter theme."
+msgstr "Il comprend dix tailles prédéfinies, de xs (12px) à 6-xl (57px), dont une taille moyenne par défaut de 16px, ce qui en fait un thème de départ idéal."
+
+#: patterns/front-page.php:28
+msgid "User-Friendly and Versatile Templates"
+msgstr "Des modèles simples et polyvalents"
+
+#: patterns/front-page.php:32
+msgid "Hariko provides a 980px content width and an 1180px wide layout, along with standard, full-width, and sidebar layouts for pages and posts."
+msgstr "Hariko propose une largeur de contenu de 980px et une mise en page large de 1180px, ainsi que des dispositions standard, pleine largeur et avec barre latérale pour les pages et les publications."
+
+#: patterns/front-page.php:36
+msgid "Usage"
+msgstr "Utilisation"
+
+#: patterns/front-page.php:40
+msgid "For general styling, you can use the style settings (typography, colors, layout, blocks) in the site editor. For more specific customization, you can add or modify templates as needed."
+msgstr "Pour le style général, utilisez les réglages de style (typographie, couleurs, disposition, blocs) dans l'éditeur de site. Pour une personnalisation plus poussée, vous pouvez ajouter ou modifier des modèles selon vos besoins."
+
+#: patterns/front-page.php:44
+msgid "Posts"
+msgstr "Publications"
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "hero"
+msgstr "Bannière"
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "A call-to-action banner whose heading, text and button label can be edited directly, without opening the block settings. The values are stored as pattern overrides, so they persist even when the theme or another plugin registers a pattern with the same slug."
+msgstr "Un bandeau d'appel à l'action dont le titre, le texte et le libellé du bouton sont modifiables directement, sans ouvrir les réglages du bloc. Les valeurs sont enregistrées comme substitutions du motif : elles persistent même si le thème ou une extension enregistre un motif portant le même identifiant."
+
+#: patterns/hero.php:18
+msgid "Build something people remember"
+msgstr "Créez quelque chose qui marque les esprits"
+
+#: patterns/hero.php:19
+msgid "Hariko ships with fluid typography, nine color style variations and responsive block styles, so you can focus on the content."
+msgstr "Hariko intègre une typographie fluide, neuf variations de style de couleurs et des styles de bloc adaptatifs, afin que vous puissiez vous concentrer sur le contenu."
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "Base"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Base / Two"
+msgstr "Base / Deux"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "Contraste"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "Primaire"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Secondary (accent only)"
+msgstr "Secondaire (accent uniquement)"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "Tertiaire"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Light Gray"
+msgstr "Gris clair"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Gray"
+msgstr "Gris"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Dark Gray"
+msgstr "Gris foncé"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr "XS"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr "S"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr "M"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr "L"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr "XL"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2XL"
+msgstr "2XL"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3XL"
+msgstr "3XL"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Default"
+msgstr "Par défaut"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Sans serif"
+msgstr "Sans serif"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Serif"
+msgstr "Serif"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "En-tête"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Pied de page"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Posts"
+msgstr "Publications"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single with sidebar"
+msgstr "Publication avec barre latérale"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single fullwidth"
+msgstr "Publication pleine largeur"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page with sidebar"
+msgstr "Page avec barre latérale"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page fullwidth"
+msgstr "Page pleine largeur"
+
+#: styles/colors/amber.json
+msgctxt "Style variation name"
+msgid "Amber"
+msgstr "Ambre"
+
+#: styles/colors/cocoa.json
+msgctxt "Style variation name"
+msgid "Cocoa"
+msgstr "Cacao"
+
+#: styles/colors/crimson.json
+msgctxt "Style variation name"
+msgid "Crimson"
+msgstr "Cramoisi"
+
+#: styles/colors/forest.json
+msgctxt "Style variation name"
+msgid "Forest"
+msgstr "Forêt"
+
+#: styles/colors/lemon.json
+msgctxt "Style variation name"
+msgid "Lemon"
+msgstr "Citron"
+
+#: styles/colors/olive.json
+msgctxt "Style variation name"
+msgid "Olive"
+msgstr "Olive"
+
+#: styles/colors/plum.json
+msgctxt "Style variation name"
+msgid "Plum"
+msgstr "Prune"
+
+#: styles/colors/rose.json
+msgctxt "Style variation name"
+msgid "Rose"
+msgstr "Rose"
+
+#: styles/colors/slate.json
+msgctxt "Style variation name"
+msgid "Slate"
+msgstr "Ardoise"

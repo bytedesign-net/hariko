@@ -1,8 +1,9 @@
 # Copyright (C) 2026 BYTE DESIGN
 # This file is distributed under the GNU General Public License v2 or later.
+
 msgid ""
 msgstr ""
-"Project-Id-Version: Hariko 1.0.12\n"
+"Project-Id-Version: Hariko 1.0.13\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/hariko\n"
 "Last-Translator: BYTE DESIGN\n"
 "Language-Team: BYTE DESIGN\n"
@@ -10,83 +11,325 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-11-11 20:00+0900\n"
-"X-Generator: Poedit\n"
+"POT-Creation-Date: 2026-11-14T00:14:34+00:00\n"
+"PO-Revision-Date: 2026-11-14 00:00+0900\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: hariko\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Hariko"
+msgstr "Hariko"
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://hariko.bytedesign.net/"
+msgstr "https://hariko.bytedesign.net/"
 
 #. Description of the theme
 #: style.css
-msgid "Hariko is an accessible block theme designed to WCAG 2.2 AA. It includes visible focus indicators for every interactive element, keyboard skip links, sufficient color contrast, reduced-motion support, and works as a base for custom-made sites."
-msgstr "Hariko は WCAG 2.2 AA への準拠を設計目標としたアクセシビリティ対応のブロックテーマです。すべての操作要素にわかりやすいフォーカス表示、キーボード用のスキップリンク、十分なカラーコントラスト、モーション低減対応を備え、オリジナルサイト制作のベースとして使えます。"
+msgid "Hariko is a minimalist WordPress block theme designed for flexibility and customization. It includes preset colors, typography, content and wide layout sizes, reusable template parts, and standard, full-width, and sidebar templates for pages and posts. All theme text is translatable through the `hariko` text domain, and translations into Japanese, Simplified and Traditional Chinese, Korean, Spanish, French, German and Italian are bundled in the download."
+msgstr "Hariko は、柔軟性とカスタマイズのために設計されたミニマルな WordPress ブロックテーマです。カラーのプレセット、タイポグラフィ、コンテンツ幅・ワイドレイアウト幅、再利用可能なテンプレートパーツ、固定ページと投稿用の標準・フルワイド・サイドバー付きテンプレートを備えています。テーマのテキストはすべて `hariko` テキストドメイン経由で翻訳可能で、ダウンロードには日本語のほかに、簡体字中国語、繁体字中国語、韓国語、スペイン語、フランス語、ドイツ語、イタリア語の翻訳を同梱しています。"
+
+#. Author of the theme
+#: style.css
+msgid "BYTE DESIGN"
+msgstr "BYTE DESIGN"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://bytedesign.net/"
+msgstr "https://bytedesign.net/"
 
 #. Translators: Label of the "read more" link below post excerpts.
-#: functions.php:44
+#: functions.php:74
 msgid "Read More"
 msgstr "続きを読む"
 
 #. Translators: Label of the link to the previous posts page.
-#: functions.php:46
+#: functions.php:76
 msgid "Newer Posts"
 msgstr "新しい投稿"
 
 #. Translators: Label of the link to the next posts page.
-#: functions.php:48
+#: functions.php:78
 msgid "Older Posts"
 msgstr "古い投稿"
 
-#: functions.php:49
+#: functions.php:79
 msgid "Search"
 msgstr "検索"
 
-#: functions.php:50
+#: functions.php:80
 msgid "Please try searching."
 msgstr "検索をお試しください。"
 
 #. Translators: ARIA label of the header navigation area.
-#: functions.php:52
+#: functions.php:82
 msgid "Main menu"
 msgstr "メインメニュー"
 
-#: functions.php:53
+#: functions.php:83
 msgid "Page Not Found"
 msgstr "ページが見つかりません"
 
-#: functions.php:54
+#: functions.php:84
 msgid "The page you are looking for does not exist, or it has been moved."
 msgstr "お探しのページは存在しないか、移動された可能性があります。"
 
-#: functions.php:55
+#: functions.php:85
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr "お使いの検索条件に一致する投稿は見つかりませんでした。別のキーワードでお試しください。"
 
-#: functions.php:56
+#: functions.php:86
 msgid "Latest Posts"
 msgstr "最新投稿"
 
-#: functions.php:57
+#: functions.php:87
 msgid "Categories"
 msgstr "カテゴリー"
 
-#: functions.php:58
+#: functions.php:88
 msgid "Archives"
 msgstr "アーカイブ"
 
-#: functions.php:59
+#: functions.php:89
 msgid "No posts found yet."
 msgstr "まだ投稿がありません。"
 
-#: functions.php:60 patterns/front-page.php:26
+#: functions.php:90
+#: patterns/hero.php:23
 msgid "Get started"
 msgstr "はじめてみる"
 
-#. Translators: 1: site title markup with a link to the site, 2: linked WordPress name.
-#: functions.php:160
+#. translators: 1: site title markup with a link to the site, 2: linked WordPress name.
+#: functions.php:165
+#, php-format
 msgid "%1$s theme by BYTE DESIGN. Powered by %2$s."
 msgstr "%1$s は BYTE DESIGN によるテーマです。Powered by %2$s。"
 
-#: functions.php:162
+#: functions.php:167
 msgid "https://wordpress.org/"
 msgstr "https://ja.wordpress.org/"
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "faq"
+msgstr "よくある質問"
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Frequently asked questions built with the core/accordion blocks from WordPress 6.9. The first question opens by default, every question is a real heading and the answers are keyboard accessible without any custom JavaScript."
+msgstr "WordPress 6.9 のコア アコーディオン ブロックで構成したよくある質問のパターンです。一番目の質問は初期状態で開かれ、質問は見出しとして出力され、JavaScript を追加せずにキーボード操作できます。"
+
+#: patterns/faq.php:11
+msgid "Frequently Asked Questions"
+msgstr "よくある質問"
+
+#: patterns/faq.php:17
+msgid "What is the Hariko theme?"
+msgstr "Hariko テーマとは何ですか?"
+
+#: patterns/faq.php:22
+msgid "Hariko is a block theme with fluid typography, ten font-size presets and nine color style variations. It is intentionally minimal, so it works as a starter theme for your own projects."
+msgstr "Hariko はフレキシブルなタイポグラフィ、10 種類のフォントサイズ プリセット、9 種類のカラー スタイル バリエーションを備えたブロックテーマです。あえて最小限に作っているので、独自プロジェクトのスターターテーマとしても使えます。"
+
+#: patterns/faq.php:29
+msgid "Do I need to edit theme.json to customize it?"
+msgstr "カスタマイズするために theme.json を編集する必要がありますか?"
+
+#: patterns/faq.php:34
+msgid "No. Colors, typography and layout are editable in the Site Editor, and the style variations let you switch the whole appearance with one click. theme.json is only there when you want to change the defaults for the entire site."
+msgstr "いいえ。色、タイポグラフィ、レイアウトはサイトエディターで編集でき、スタイル バリエーションを使えばデザイン全体をワンクリックで切り替えられます。theme.json はサイト全体の既定値を変更したい場合에만役立てるファイルです。"
+
+#: patterns/faq.php:41
+msgid "How does this accordion work?"
+msgstr "このアコーディオンはどのように動きますか?"
+
+#: patterns/faq.php:46
+msgid "It is the core accordion block, shipped with WordPress 6.9. WordPress loads a small accessibility script only on pages that use the block, and the open state also works without JavaScript."
+msgstr "WordPress 6.9 に同梱されているコアのアコーディオン ブロックです。スクリプトはこのブロックを使っているページにだけ読み込まれ、JavaScript が使えない環境でも開閉状態を維持できます。"
+
+#: patterns/front-page.php
+msgctxt "Pattern title"
+msgid "front-page"
+msgstr "フロントページ"
+
+#: patterns/front-page.php:16
+msgid "Hariko: A Minimalist WordPress Block Theme for Customization"
+msgstr "Hariko:カスタマイズのためのミニマルな WordPress ブロックテーマ"
+
+#: patterns/front-page.php:20
+msgid "is a WordPress block editor theme designed with a minimalist aesthetic and built for customization."
+msgstr "は、ミニマルな美学を基に設計され、カスタマイズ向けに構築された WordPress ブロックエディターテーマです。"
+
+#: patterns/front-page.php:24
+msgid "It includes ten font-size presets from xs (12px) to 6-xl (57px), with a default medium size of 16px, making it an ideal starter theme."
+msgstr "デフォルトの medium(16px)から xs(12px)から 6-xl(57px)まで 10 段階のフォントサイズプリセットを備え、スターターテーマとして最適です。"
+
+#: patterns/front-page.php:28
+msgid "User-Friendly and Versatile Templates"
+msgstr "使いやすい汎用性の高いテンプレート"
+
+#: patterns/front-page.php:32
+msgid "Hariko provides a 980px content width and an 1180px wide layout, along with standard, full-width, and sidebar layouts for pages and posts."
+msgstr "Hariko は 980px のコンテンツ幅と 1180px のワイドレイアウトを提供し、固定ページと投稿用に標準・フルワイド・サイドバー付きのレイアウトを備えています。"
+
+#: patterns/front-page.php:36
+msgid "Usage"
+msgstr "使い方"
+
+#: patterns/front-page.php:40
+msgid "For general styling, you can use the style settings (typography, colors, layout, blocks) in the site editor. For more specific customization, you can add or modify templates as needed."
+msgstr "基本的なスタイルはサイトエディターのスタイル設定(タイポグラフィ、色、レイアウト、ブロック)で変更できます。より細かいカスタマイズは、必要に応じてテンプレートの追加や変更を行ってください。"
+
+#: patterns/front-page.php:44
+msgid "Posts"
+msgstr "投稿"
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "hero"
+msgstr "ヒーロー"
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "A call-to-action banner whose heading, text and button label can be edited directly, without opening the block settings. The values are stored as pattern overrides, so they persist even when the theme or another plugin registers a pattern with the same slug."
+msgstr "見出し、本文、ボタンのラベルをブロック設定を開かずに直接編集できるコールトゥアクションバナーです。値はパターンオーバーライドとして保存されるため、テーマや他のプラグインが同じスラッグのパターンを登録してもそのまま残ります。"
+
+#: patterns/hero.php:18
+msgid "Build something people remember"
+msgstr "人の心に残るものを創る"
+
+#: patterns/hero.php:19
+msgid "Hariko ships with fluid typography, nine color style variations and responsive block styles, so you can focus on the content."
+msgstr "Hariko は流体的なタイポグラフィと 9 種のカラースタイルバリエーション、レスポンシブなブロックスタイルを備えているため、コンテンツに集中できます。"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "ベース"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Base / Two"
+msgstr "ベース 2"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "コントラスト"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "プライマリー"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Secondary (accent only)"
+msgstr "セカンダリー(アクセントのみ)"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "ターシャリー"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Light Gray"
+msgstr "ライトグレー"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Gray"
+msgstr "グレー"
+
+#: theme.json
+#: styles/colors/amber.json
+#: styles/colors/cocoa.json
+#: styles/colors/crimson.json
+#: styles/colors/forest.json
+#: styles/colors/lemon.json
+#: styles/colors/olive.json
+#: styles/colors/plum.json
+#: styles/colors/rose.json
+#: styles/colors/slate.json
+msgctxt "Color name"
+msgid "Dark Gray"
+msgstr "ダークグレー"
 
 #: theme.json
 msgctxt "Space size name"
@@ -127,83 +370,6 @@ msgstr "極大"
 msgctxt "Font family name"
 msgid "Default"
 msgstr "標準"
-
-#: patterns/front-page.php:38
-msgid "Hariko: A Minimalist WordPress Block Theme for Customization"
-msgstr "Hariko:カスタマイズのためのミニマルな WordPress ブロックテーマ"
-
-#: patterns/front-page.php:42
-msgid "is a WordPress block editor theme designed with a minimalist aesthetic and built for customization."
-msgstr "は、ミニマルな美学を基に設計され、カスタマイズ向けに構築された WordPress ブロックエディターテーマです。"
-
-#: patterns/front-page.php:46
-msgid "It includes ten font-size presets from xs (12px) to xxxxxxl (57px), with a default medium size of 16px, making it an ideal starter theme."
-msgstr "デフォルトの medium(16px)から xs(12px)から xxxxxxl(57px)まで 10 段階のフォントサイズプリセットを備え、スターターテーマとして最適です。"
-
-#: patterns/front-page.php:50
-msgid "User-Friendly and Versatile Templates"
-msgstr "使いやすい汎用性の高いテンプレート"
-
-#: patterns/front-page.php:54
-msgid "Hariko provides a 980px content width and an 1180px wide layout, along with standard, full-width, and sidebar layouts for pages and posts."
-msgstr "Hariko は 980px のコンテンツ幅と 1180px のワイドレイアウトを提供し、固定ページと投稿用に標準・フルワイド・サイドバー付きのレイアウトを備えています。"
-
-#: patterns/front-page.php:58
-msgid "Usage"
-msgstr "使い方"
-
-#: patterns/front-page.php:62
-msgid "For general styling, you can use the style settings (typography, colors, layout, blocks) in the site editor. For more specific customization, you can add or modify templates as needed."
-msgstr "基本的なスタイルはサイトエディターのスタイル設定(タイポグラフィ、色、レイアウト、ブロック)で変更できます。より細かいカスタマイズは、必要に応じてテンプレートの追加や変更を行ってください。"
-
-#: patterns/front-page.php:66
-msgid "Posts"
-msgstr "投稿"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Base"
-msgstr "ベース"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Base / Two"
-msgstr "ベース 2"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Contrast"
-msgstr "コントラスト"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Primary"
-msgstr "プライマリー"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Secondary (accent only)"
-msgstr "セカンダリー(アクセントのみ)"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Tertiary"
-msgstr "ターシャリー"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Light Gray"
-msgstr "ライトグレー"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Gray"
-msgstr "グレー"
-
-#: theme.json
-msgctxt "Color name"
-msgid "Dark Gray"
-msgstr "ダークグレー"
 
 #: theme.json
 msgctxt "Font family name"
@@ -254,3 +420,48 @@ msgstr "サイドバー付き(固定ページ)"
 msgctxt "Custom template name"
 msgid "Page fullwidth"
 msgstr "フルワイド(固定ページ)"
+
+#: styles/colors/amber.json
+msgctxt "Style variation name"
+msgid "Amber"
+msgstr "アンバー"
+
+#: styles/colors/cocoa.json
+msgctxt "Style variation name"
+msgid "Cocoa"
+msgstr "ココア"
+
+#: styles/colors/crimson.json
+msgctxt "Style variation name"
+msgid "Crimson"
+msgstr "クリムゾン"
+
+#: styles/colors/forest.json
+msgctxt "Style variation name"
+msgid "Forest"
+msgstr "フォレスト"
+
+#: styles/colors/lemon.json
+msgctxt "Style variation name"
+msgid "Lemon"
+msgstr "レモン"
+
+#: styles/colors/olive.json
+msgctxt "Style variation name"
+msgid "Olive"
+msgstr "オリーブ"
+
+#: styles/colors/plum.json
+msgctxt "Style variation name"
+msgid "Plum"
+msgstr "プラム"
+
+#: styles/colors/rose.json
+msgctxt "Style variation name"
+msgid "Rose"
+msgstr "ローズ"
+
+#: styles/colors/slate.json
+msgctxt "Style variation name"
+msgid "Slate"
+msgstr "スレート"
