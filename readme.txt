@@ -3,7 +3,7 @@ Tags: accessibility-ready, block-styles, translation-ready
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 1.0.13
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,6 +11,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Hariko is a minimalist WordPress block theme designed for flexibility and customization. It includes preset colors, typography, content and wide layout sizes, reusable template parts, and standard, full-width, and sidebar templates for pages and posts. All theme text is translatable through the `hariko` text domain, and translations into Japanese, Simplified and Traditional Chinese, Korean, Spanish, French, German and Italian are bundled in the download.
 
 == Changelog ==
+= 1.0.14 =
+* Fixed the front page hero and the `hariko/hero` pattern rendering a black background instead of the primary color, and the block validation error when editing the front page template, by switching the cover block to the `overlayColor` attribute that core uses for palette colors.
+
 = 1.0.13 =
 * Added interactive state styles to `theme.json`: `:hover`, `:focus`, `:focus-visible` and `:active` for buttons, links and navigation links, plus the `-current` custom state that highlights the active item in the navigation block.
 * Declared the responsive viewport breakpoints used by the new `@mobile` / `@tablet` block styles explicitly in `settings.viewport` (`480px` / `782px`, matching the WordPress core defaults), and added responsive styles to the front page intro heading and the navigation links.
